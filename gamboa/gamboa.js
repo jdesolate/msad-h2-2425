@@ -15,7 +15,7 @@ function updateBtn()
     }
 }
 
-// Dark mode toggle
+// Dark mode toggle function
 document.addEventListener('DOMContentLoaded', function() {
     const btn = document.querySelector('.dark-mode-toggle');
     btn.addEventListener('click', function() {
