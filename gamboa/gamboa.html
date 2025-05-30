@@ -10,16 +10,28 @@
 <!--This is my script (Javascript)-->
 <script src="gamboa.js"></script>
 
-<body>
-    <header>
-        <div class="header-row">
-            <span>Welcome, User!</span>
+<body class = "dark-mode">
+  <header class="sticky-header">
+    <div class="header-row">
+        <div class="header-cards">
+            <a href="https://www.linkedin.com/" target="_blank" class="header-card linkedin" title="LinkedIn">
+                <img src="LinkedInColored.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/Scorch879" target="_blank" class="header-card github" title="GitHub">
+                <img src="Github.svg" alt="GitHub" />
+            </a>
+            <a href="https://www.facebook.com/JobertGamboa0804" target="_blank" class="header-card facebook" title="Facebook">
+                <img src="FacebookColored.svg" alt="Facebook" />
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&to=jbgamboa1223@gmail.com&su=Hello&body=Hi%20there!" target="_blank" class="header-card email" title="Email">
+                <img src="Email.svg" alt="Email" />
+            </a>
         </div>
-    </header>
+        <button class="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+</header>
 
-    <section>
-        <button class="dark-mode-toggle">☀️ Light Mode</button>
-    </section>
+  
 
     <section class="profile-banner">
         <div class="banner-img" id="bannerImg">
@@ -30,8 +42,9 @@
             <input type="file" id="profileInput" accept="image/*" style="display:none;">
             <span class="camera-icon" id="cameraIcon">📷</span>
         </div>
+        </div>
 
-        <div class="username" id="username">Username</div>
+        <div class="username" id="username">Jobert Damian P. Gamboa</div>
     </div>
         
         <button class="edit-profile" id="editProfileBtn" >✏ Edit Profile</button>
@@ -40,7 +53,7 @@
 
     <nav class="profile-tabs">
         <button class="tab active" onclick="showTab('about')">About me</button>
-        <button class="tab" onclick="showTab('hobbies')">Hobbies</button>
+        <button class="tab" onclick="showTab('projects')">Projects</button>
         <button class="tab" onclick="showTab('content')">Content</button>
     </nav>
 
@@ -48,8 +61,8 @@
         <div id="about" class="tab-pane active">
             <p id="aboutText">This is the About Me section.</p>
         </div>
-        <div id="hobbies" class="tab-pane">
-            <p id ="hobbiesText">This is the Hobbies section.</p>
+        <div id="projects" class="tab-pane">
+            <p id ="hobbiesText">This is the Projects section.</p>
         </div>
         <div id="content" class="tab-pane"> 
             <p id="contentText">This is the Content section.</p>
@@ -69,7 +82,7 @@
             <textarea id="modalAbout"></textarea>
             </label><br><br>
 
-            <label>Hobbies:<br>
+            <label>Projects:<br>
             <textarea id="modalHobbies"></textarea>
             </label><br><br>
 
