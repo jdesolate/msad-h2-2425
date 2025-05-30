@@ -23,7 +23,7 @@
         </div>
         <div class="home-content">
             <h1> Hi! It's <span>Claire</span></h1>
-            <h3 class="typing-text">I'm a Computer Engineering Student<span></span></h3>
+            <h3 class="typing-text">I<span></span></h3>
             <p>Currently patching bugs in the code of life- sometimes it compiles, sometimes I just pray and hit 'run'. Trying to script my own path, but God's still the lead developer. Life may throws exceptions, but hey, you're not the only one debugging at 3am.</p>
             <div class="social-icons">
                 <a href="https://github.com/clerrdynt" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -40,7 +40,7 @@
         </div>
         <div class="home-content">
             <h1>Basic Information</h1>
-            <p><strong>Name:</strong>Mary Claire H.D Dayonot</p>
+            <p><strong>Name:</strong>Mary Claire H. Dayonot</p>
             <p><strong>Date of Birth:</strong>August 8, 2024</p>
             <p><strong>Gender:</strong>Female</p>
             <p><strong>Nationality:</strong>Filipino</p>
@@ -54,13 +54,28 @@
         </div>
         <div class="home-content">
             <h1>Basic Information</h1>
-            <p><strong>Name:</strong>Mary Claire H.D Dayonot</p>
-            <p><strong>Date of Birth:</strong>August 8, 2024</p>
-            <p><strong>Gender:</strong>Female</p>
-            <p><strong>Nationality:</strong>Filipino</p>
-            <p><strong>Hobbies:</strong>Reading and Freediving</p>
+            <p><strong>Phone Number:</strong>09610522493</p>
+            <p><strong>Email Address:</strong>maryclairedayonot@gmail.com</p>
+            <p><strong>Institutional Email:</strong>maryclaire.dayonot@gmail.com</p>
+            <p><strong>Mail Address:</strong>Ocana, Carcar City</p>
         </div>
     </section>
+
+    <script>
+        const text = "I'm a Computer Engineering Student.";
+        const el = document.querySelector(".typing-text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+            el.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);
+            }
+        }
+
+        window.onload = type;
+    </script>
 
     <script>
         function showSection(section){

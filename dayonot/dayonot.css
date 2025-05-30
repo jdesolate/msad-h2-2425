@@ -60,7 +60,8 @@ nav a:hover::after {
 
 /* Section Layout */
 .home,
-.basic {
+.basic,
+.contact {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,8 +74,10 @@ nav a:hover::after {
 /* Shared Profile Image */
 .home-img img,
 .basic-img img,
+.contact-img img,
 .home-img img,
-.basic .home-img img {
+.basic .home-img,
+.contact .home-img img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -131,10 +134,66 @@ nav a:hover::after {
   font-weight: 600;
 }
 
+.contact .home-content {
+  max-width: 600px;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(240, 138, 138, 0.3);
+  border: 1px solid #f08a8a;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.contact .home-content h1 {
+  font-size: 32px;
+  color: #f08a8a;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #f08a8a;
+  padding-bottom: 10px;
+}
+
+.contact .home-content p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.contact .home-content p strong {
+  min-width: 150px;
+  color: #f08a8a;
+  font-weight: 600;
+}
+
 .typing-text {
   font-size: 24px;
   color: #f08a8a;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #b74b4b;
+  width: 0;
   margin-bottom: 20px;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #b74b4b;
+  }
 }
 
 .home-content p {
@@ -165,7 +224,8 @@ nav a:hover::after {
   }
 
   .home-img img,
-  .basic-img img {
+  .basic-img img,
+  .contact-img img {
     width: 200px;
     height: 200px;
   }
