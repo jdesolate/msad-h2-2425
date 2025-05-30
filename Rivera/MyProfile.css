@@ -1,0 +1,42 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+body {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */   /* ensures full viewport height */
+    background: linear-gradient(to top, #26063d , #480b75 , #9f8bd0 );
+    height: 100vh;
+}
+
+.mainContainer{
+background-position: center;
+background-color: #1d1d1d;
+color: white;
+padding: 20px;
+border-radius: 50px;
+width: 1400px;
+height: 80vh;
+margin: auto;
+z-index: 2;
+/*  text settings*/
+text-align: center;
+}
+
+
+.profilePicture {
+    background-image: url('IMG_1913.JPEG');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50px; 
+    left: 15px;
+}
