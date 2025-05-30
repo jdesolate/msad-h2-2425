@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacres</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+        }
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4f8cff;
+            box-shadow: 0 4px 16px rgba(79, 140, 255, 0.15);
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: #2d3a4b;
+            font-size: 4rem;
+            letter-spacing: 0.2em;
+            background: linear-gradient(90deg, #4f8cff, #38e2ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 {
+            color: #2d3a4b;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            background: linear-gradient(90deg, #4f8cff, #38e2ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .upload-btn {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body> <!--HEyyyy-->
+    <input class="upload-btn" type="file" accept="image/*" id="fileInput">
+    <img class="profile-pic" id="profilePic" src=" " alt=" ">
+    <h1 id="headerText">Pacres</h1>
+    <h2>Nigga Heil Hitler 🙋🏿‍♂️</h2>
+    <button id="editBtn" style="padding: 8px 20px; font-size: 1rem; border-radius: 6px; border: none; background: #4f8cff; color: #fff; cursor: pointer; margin-top: 10px;">Edit</button>
+    <input type="text" id="editInput" style="display:none; font-size: 1.5rem; margin-top: 10px; padding: 6px 12px; border-radius: 6px; border: 1px solid #4f8cff; text-align: center;">
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const profilePic = document.getElementById('profilePic');
+        const headerText = document.getElementById('headerText');
+        const editBtn = document.getElementById('editBtn');
+        const editInput = document.getElementById('editInput');
+
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePic.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        editBtn.addEventListener('click', function() {
+            editInput.value = headerText.textContent;
+            headerText.style.display = 'none';
+            editBtn.style.display = 'none';
+            editInput.style.display = 'block';
+            editInput.focus();
+        });
+
+        editInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                headerText.textContent = editInput.value || 'Pacres';
+                headerText.style.display = 'block';
+                editBtn.style.display = 'inline-block';
+                editInput.style.display = 'none';
+            }
+        });
+
+        editInput.addEventListener('blur', function() {
+            headerText.textContent = editInput.value || 'Pacres';
+            headerText.style.display = 'block';
+            editBtn.style.display = 'inline-block';
+            editInput.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
