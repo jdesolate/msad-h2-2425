@@ -1,0 +1,89 @@
+body {
+    background-image: url("Images/background image.jpg");
+    background-size: cover;
+    position: relative;
+    min-height: 100%;
+}
+
+.Profile_Box{
+    position: relative;
+    margin-bottom: 180px;
+}
+
+.Cover_Photo{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+    
+}
+
+.Cover_Photo img{
+    width: 75%;
+    height: 350px;
+    object-fit:cover;
+    border-radius: 0 0 20px 20px;
+}
+
+.Profile_Photo{
+    position: absolute;
+    left: 200px;
+    bottom: -150px;
+    z-index: 2;
+}
+
+.Profile_Photo img{
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+    font-family: "Congenial Medium";
+    src: url("Fonts/fonnts.com-Congenial_Medium.otf")
+}
+
+@font-face {
+    font-family: "Congenial Light";
+    src: url("Fonts/fonnts.com-Congenial_Light.otf")
+}
+
+@font-face {
+    font-family: "Congenial Regular";
+    src: url("Fonts/fonnts.com-Congenial_Regular.otf")
+}
+
+h1 {
+    font-family: "Congenial Medium", sans-serif;
+    font-size: 230%;
+    color:white;
+    position: absolute;
+    left: 400px;
+    bottom: -100px;
+    z-index: 2;
+}
+
+.Bio{
+    font-family: "Congenial Light";
+    font-size: 100%;
+    color:gainsboro;
+    position: absolute;
+    left: 400px;
+    bottom: -120px;
+    z-index: 2;
+}
+
+a{
+    font-family: "Congenial Regular";
+    font-size: 150%;
+    color: white;
+    position: absolute;
+    left: 200px;
+    bottom: -80px;
+    z-index: 2;
+}
