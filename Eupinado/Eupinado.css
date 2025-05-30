@@ -1,0 +1,15 @@
+.background {
+    height: 2000px;
+    background-image: linear-gradient(to right, #12f1ff , #010231 );
+}
+
+.profile-name {
+    color: white;
+    text-align: center;
+}
+
+.email-name
+{
+  color: white;
+  text-align: center;  
+}
