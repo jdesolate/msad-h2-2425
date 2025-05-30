@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="gamboa.css">
+</head>
+
+<!--This is my script (Javascript)-->
+<script src="gamboa.js"></script>
+
+<body>
+    <header>
+        <div class="header-row">
+            <span>Welcome, User!</span>
+        </div>
+    </header>
+
+    <section>
+        <button class="dark-mode-toggle">☀️ Light Mode</button>
+    </section>
+
+    <section class="profile-banner">
+        <div class="banner-img" id="bannerImg">
+            <input type="file" id="bannerInput" accept="image/*" style="display:none;"> 
+
+        <div class="profile-pic-container">
+            <div class="profile-pic" id="profilePic"></div>
+            <input type="file" id="profileInput" accept="image/*" style="display:none;">
+            <span class="camera-icon" id="cameraIcon">📷</span>
+        </div>
+
+        <div class="username" id="username">Username</div>
+    </div>
+        
+        <button class="edit-profile" id="editProfileBtn" >✏ Edit Profile</button>
+        <button class="edit-banner" id="editBannerBtn">Edit Banner</button>
+    </section>
+
+    <nav class="profile-tabs">
+        <button class="tab active" onclick="showTab('about')">About me</button>
+        <button class="tab" onclick="showTab('hobbies')">Hobbies</button>
+        <button class="tab" onclick="showTab('content')">Content</button>
+    </nav>
+
+    <section class="tab-content">
+        <div id="about" class="tab-pane active">
+            <p id="aboutText">This is the About Me section.</p>
+        </div>
+        <div id="hobbies" class="tab-pane">
+            <p id ="hobbiesText">This is the Hobbies section.</p>
+        </div>
+        <div id="content" class="tab-pane"> 
+            <p id="contentText">This is the Content section.</p>
+        </div>
+
+    </section>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+
+            <h2>Edit Profile</h2>
+            <label>Username:<br>
+            <input type="text" id="modalUsername">
+            </label><br><br>
+
+            <label>About Me:<br>
+            <textarea id="modalAbout"></textarea>
+            </label><br><br>
+
+            <label>Hobbies:<br>
+            <textarea id="modalHobbies"></textarea>
+            </label><br><br>
+
+            <label>Content:<br>
+            <textarea id="modalContent"></textarea>
+            </label><br><br>
+
+            <button id="saveProfileBtn">Save</button>
+            <button id="cancelProfileBtn">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
