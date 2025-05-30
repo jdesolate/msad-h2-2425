@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #563d05;
+  --main-color: #38d50d;
+  --text-color: #312e2e;
+  --second-text-color: #555;
+  --white-color: #fff;
+  --cover-color: linear-gradient(45deg, #0c4e0a, #38d50d);
+  --pages-color: linear-gradient(45deg, #fff, #ddd);
+  --border: .125rem solid #00f060;
+  --box-shadow: 0 0 .6rem rgba(0, 0, 0, 0.2);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+.wrapper{
+    position: relative;
+    width: 66rem;
+    height: 45rem;
+}
+
+.cover {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--cover-color);
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    transform-origin: right;
+}
+
+.cover.cover-right.turn{
+    transform: rotateY(180deg);
+}
+
+.cover.cover-left {
+    z-index: -1;
+}
