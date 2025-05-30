@@ -1,0 +1,53 @@
+body{
+    background-color: #5a8c6d;
+    margin: 0;
+    font-family:monospace;
+    font-size:20px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #77b28c;
+    min-height: 100vh;
+}
+
+.pfpbanner {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    background-color: #333333;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #333333;
+}
+
+.pfpwrap{
+    position: absolute;
+    bottom: -25px;        
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;           
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #333333;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.profile-name{
+    text-align: center;
+}
+
+.pfp{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
