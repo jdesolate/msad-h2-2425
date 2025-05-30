@@ -62,9 +62,6 @@ header {
   }
 }
 .photo-grid-section {
-  animation: translate linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 .timeline-box {
   animation: appear linear;
@@ -252,6 +249,9 @@ footer {
   box-shadow: 0 2px 12px 0 rgba(60,255,0,0.05);
   transition: box-shadow 0.3s;
   aspect-ratio: 1 / 1;
+  animation: translate linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
 }
 .photo-grid-item img {
   width: 100%;
