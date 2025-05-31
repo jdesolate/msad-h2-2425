@@ -165,6 +165,11 @@
             type();
         }
 
+        function playGame() {
+            // Directly open the itch.io game page
+            window.open('https://johnemmanuelpacres.itch.io/ecocollect', '_blank');
+        }
+
         // Start typing effect after page load
         setTimeout(typeEffect, 2000);
         window.addEventListener('DOMContentLoaded', loadTheme);
