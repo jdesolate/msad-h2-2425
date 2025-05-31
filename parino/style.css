@@ -5,12 +5,47 @@ body {
     font-size: 20px;
 }
 
+.scroll {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-wrapper {
+    position: absolute;
+    width: 100%;
+}
+
+.sm-bg {
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    columns: 3 200px;
+    column-gap: 1em;
+}
+
+.sm-bg img {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    break-inside: avoid;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-100% + 600px));
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
     background-color: #EB5E55;
-    min-height: 105vh;
+    min-height: 110dvh;
 }
 
 .pfpbanner {
@@ -36,9 +71,21 @@ body {
     width: 200px;           
     height: 200px;
     border-radius: 50%;
-    border: 4px solid #333333;
-    overflow: hidden;
-    background-color: #333333;
+    border: none;
+    padding: 4px; 
+    background: linear-gradient(45deg, #3DA5D9, #191308);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    background-origin: border-box;
+}
+
+.pfpwrap > * {
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white; 
 }
 
 .profile-name {
