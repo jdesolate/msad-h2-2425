@@ -1,33 +1,150 @@
-/* Background Styling */
+/* Global */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #12f1ff , #010231);
-    height: 2000px;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to left, #12f1ff, #010231);
+    color: white;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #111;
+    border-bottom: 1px solid #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+.contact-number {
+    color: white;
+    font-size: 15px;
+}
+
+/* Header (Name + Image) */
+.name {
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+}
+
+.name-text {
+    max-width: 50%;
+}
+
+.name-text h1 {
+    font-size: 50px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.name-text p {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.social-icons {
+  margin-top: 25px;
+}
+
+.social-icons i {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #00aaff;
+}
+
+.role {
+    font-size: 20px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: white;
+}
+
+/* Profile Image */
+.background {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* Container */
-.background {
-    text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px white;
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    border: 4px solid #00b0b0 ;
 }
 
-/* Name Styling */
-.profile-name {
-    font-size: 2.5em;
-    color: #00796b;
-    margin-bottom: 10px;
+/* About Section */
+.about {
+    background-color: #151515;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: center;
 }
 
-/* Email Styling */
-.email-name {
-    font-size: 1.2em;
-    color: #555;
+.about-content {
+    max-width: 700px;
 }
+
+.about-content h2 {
+    font-size: 28px;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.email {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.about-content p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.location {
+    margin-top: 30px;
+    font-style: italic;
+    color: #999;
+}
+
+
+
+
+
