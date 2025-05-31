@@ -105,22 +105,28 @@
                     <div class="projects-box">
                         <h3 class="projects-title"><strong>projects </strong><em>!</em></h3>
                         <div class="project-content">
-                            <h4 class="project-name">Hemotica</h4>
-                            <p class="project-description">A desktop application streamlining end-to-end blood management workflows, including records and inventory management, barcodes, analytics, PDF exports, and email notifications.</p>
-                            <div class="project-tags">
+                            <h4 id="project-name" class="project-name">Hemotica</h4>
+                            <p id="project-description" class="project-description">
+                                A desktop application streamlining end-to-end blood management workflows, including records and inventory management, barcodes, analytics, PDF exports, and email notifications.
+                            </p>
+                            <div id="project-tags" class="project-tags">
                                 <span class="tag">C#</span>
+                                <span class="tag">HTML</span>
                                 <span class="tag">Windows Forms</span>
                                 <span class="tag">.NET Framework</span>
                                 <span class="tag">Microsoft Access</span>
                             </div>
                             <hr class="divider">
                             <div class="project-footer">
-                                <a href="https://github.com/nsfw-syntaxia/Hemotica" target="_blank" class="github-link">
-                                    <img src="repository.svg" alt="GitHub Repository" class="github-icon">
-                                </a>
-                                <a href="hemotica-details.html" class="details-link">
-                                    <img src="details.svg" alt="View Details" class="details-icon">
-                                </a>
+                                <div class="footer-left" id="footer-left">
+                                    <a href="https://github.com/nsfw-syntaxia/Hemotica.git" target="_blank" class="project-link">
+                                        <img src="repository.svg" alt="GitHub Repository" class="github-icon">
+                                    </a>
+                                </div>
+                                <div class="footer-right">
+                                    <button id="next-btn" class="project-link">
+                                        <img src="next.svg" alt="Next Project" class="next-icon">
+                                </div>
                             </div>
                         </div>
                    </div>
@@ -174,6 +180,78 @@
                 input.addEventListener('change', updateButtons);
             });
             updateButtons();
+        </script>
+        <script>
+            const projects = [
+                {
+                    name: "Hemotica",
+                    description: "A desktop application streamlining end-to-end blood management workflows, including records and inventory management, barcodes, analytics, PDF exports, and email notifications.",
+                    tags: ["C#", "HTML", "Windows Forms", ".NET Framework", "Microsoft Access"],
+                    github: "https://github.com/nsfw-syntaxia/Hemotica.git"
+                },
+                {
+                    name: "TickTockler",
+                    description: "A desktop application with flexible view modes, schedule management (task, appointment, event), and search functionality.",
+                    tags: ["C#", "Windows Forms", ".NET Framework"],
+                    github: "https://github.com/nsfw-syntaxia/Calendar.git"
+                },
+                {
+                    name: "AgeWell",
+                    description: "A console application designed for retirement homes to centralize elderly care data, assist caregivers, and update families on residents' health.",
+                    tags: ["C#", ".NET Framework"],
+                    github: "https://github.com/nsfw-syntaxia"
+                },
+                {
+                    name: "Paws and Treats",
+                    description: "A console application for pet café operations, managing menus, orders, memberships and donations, pets and playrooms, and adoption records.",
+                    tags: ["C"],
+                    github: "https://github.com/nsfw-syntaxia"
+                }
+            ];
+    
+            let current = 0;
+    
+            const nameProject = document.getElementById("project-name");
+            const descriptionProject = document.getElementById("project-description");
+            const tagsProject = document.getElementById("project-tags");
+            const footerLeft = document.getElementById("footer-left");
+    
+            document.getElementById("next-btn").addEventListener("click", () => {
+                nameProject.classList.remove("show");
+                descriptionProject.classList.remove("show");
+                tagsProject.classList.remove("show");
+        
+                setTimeout(() => {
+                    current = (current + 1) % projects.length;
+                    const p = projects[current];
+            
+                    nameProject.textContent = p.name;
+                    descriptionProject.textContent = p.description;
+
+                    tagsProject.innerHTML = "";
+                    p.tags.forEach(tag => {
+                        const span = document.createElement("span");
+                        span.className = "tag";
+                        span.textContent = tag;
+                        tagsProject.appendChild(span);
+                    });
+            
+                    footerLeft.innerHTML = `
+                    <a href="${p.github}" target="_blank" class="icon-link">
+                        <img src="repository.svg" alt="GitHub Repository" class="github-icon">
+                    </a>`;
+            
+                    nameProject.classList.add("show");
+                    descriptionProject.classList.add("show");
+                    tagsProject.classList.add("show");
+                }, 300);
+            });
+    
+            window.addEventListener("ContentLoaded", () => {
+                nameProject.classList.add("fade", "show");
+                descriptionProject.classList.add("fade", "show");
+                tagsProject.classList.add("fade", "show");
+            });
         </script>
     </body>
 </html>

@@ -480,7 +480,7 @@ body::before {
 .project-description {
     font-size: 0.95rem;
     color: #5c5488;
-    margin: 0 50px 10px 50px;
+    margin: 0 25px 10px 25px;
     line-height: 1.4;
 }
 
@@ -512,26 +512,53 @@ body::before {
 
 .project-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap: 13px;
     width: 100%;
     padding: 0 10px;
 }
 
-.github-link, .details-link {
-    display: inline-block;
+#next-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.github-icon,
-.details-icon {
+.fade {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.github-icon {
+    width: 27px;
+    height: 27px;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.next-icon {
     width: 25px;
     height: 25px;
+    justify-content: flex-end;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .github-icon:hover,
-.details-icon:hover {
+.next-icon:hover {
     transform: scale(1.2);
 }
