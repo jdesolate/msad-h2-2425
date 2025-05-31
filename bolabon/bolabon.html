@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Own Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="bolabon.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <button id="darkModeToggle">Switch to Dark Mode</button>
+
+  <div class="profile-card">
+    <h2>My Own Profile</h2>
+
+    <div class="profile-photo">
+      <img src="bolabon.jpg" alt="Johann's Photo" />
+    </div>
+
+    <div class="info">
+      <p><strong>Name:</strong> Johann O. Bolabon</p>
+      <p><strong>Contact No:</strong> 09283428098</p>
+      <p><strong>Email:</strong> bolabonjohann1@gmail.com</p>
+    </div>
+
+    <div class="about">
+      <button id="toggleAbout">About Myself</button>
+      <p id="aboutText" class="hidden">
+        I am Johann O. Bolabon, a 21-year-old second-year student pursuing a Bachelor of Science in Computer Engineering. I come from a family of five siblings and was inspired by my father, who works in the engineering field. His influence sparked my interest in engineering. Which made me chose the computer engineering as my field of interest, since I have this strong passion for technology and a deep interest in both software and hardware systems. My goal is to continuously learn, grow, and apply my skills in real-world scenarios to make meaningful contributions to the tech industry.
+
+        In my free time, I enjoy playing video games, exploring new music genres, and learning about the latest technology trends. These interests have strengthened my love for problem-solving, especially through coding and experimenting with new programming languages and development tools.
+      </p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/johann.bolabon.5" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jhansl_/?igsh=Zmh5eDIyNXN0bHlh#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Hansssel" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode")
+        ? "Switch to Light Mode"
+        : "Switch to Dark Mode";
+    });
+
+    const aboutBtn = document.getElementById("toggleAbout");
+    const aboutText = document.getElementById("aboutText");
+    aboutBtn.addEventListener("click", () => {
+      aboutText.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
