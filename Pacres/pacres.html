@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="pacres.css">
+</head>
+<body>
+    <header class="header">
+        <div class="cover-container">
+            <img src="images/cover.gif" alt="Cover" class="cover-image" id="coverImg">
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="profile-section fade-in">
+            <div class="profile-left">
+                <img src="images/profile1.jpg" alt="Profile Picture" class="profile-picture" onclick="changeProfilePicture()"
+ id="profileImg">
+                <h1 class="profile-name">John Emmanuel Pacres</h1>
+                <p class="profile-title">Computer Engineer</p>
+            </div>
+
+            <div class="profile-right">
+                <div class="info-card fade-in">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        About Me
+                    </h3>
+                    <p>Passionate software/computer engineer with expertise in modern web technologies and hardware. I love creating innovative solutions and learning new technologies. Always excited to work on challenging projects that make a difference.</p>
+                    <div style="margin-top: 15px;">
+                        <div class="info-item">
+                            <strong>Hobbies:</strong> Sketching, Fish keeping, Programming, Gardening, Reading
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone:</strong> +63 926 081 0243
+                        </div>
+                        <div class="info-item">
+                            <strong>Location:</strong> Inayawan, Cebu City, Philippines
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                        Connect With Me
+                    </h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/jem.pacres" class="social-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/jepcrs/" class="social-link" target="_blank">
+                            <!-- Instagram SVG -->
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://www.reddit.com/user/Impressive-Disk-3522/" class="social-link" target="_blank">
+                            <!-- Reddit SVG -->
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                                fill="currentColor" viewBox="0 0 24 24" >
+                                <!--Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                                <path d="m15.09,11.65c-.65,0-1.15.69-1.11,1.53.04.85.53,1.15,1.18,1.15s1.23-.34,1.19-1.19c-.04-.85-.6-1.5-1.26-1.5Z"></path><path d="m14.31,15.1c-.72-.07-1.5-.11-2.31-.11s-1.59.04-2.31.11c-.12.01-.2.14-.15.25.4.96,1.35,1.64,2.46,1.64s2.06-.68,2.46-1.64c.05-.11-.03-.24-.15-.25Z"></path><path d="m10.03,13.18c.04-.85-.46-1.53-1.11-1.53s-1.22.65-1.26,1.5c-.04.85.53,1.19,1.19,1.19s1.14-.31,1.18-1.15Z"></path><path d="m12,2C6.48,2,2,6.48,2,12c0,2.76,1.12,5.26,2.93,7.07l-1.9,1.9c-.38.38-.11,1.02.42,1.02h8.55c5.52,0,10-4.48,10-10S17.52,2,12,2Zm6.67,11.77c-.07,2.71-3.03,4.9-6.66,4.9s-6.59-2.18-6.66-4.89c-.79-.37-1.34-1.18-1.34-2.11,0-1.29,1.05-2.34,2.34-2.34.54,0,1.03.18,1.43.49,1.06-.66,2.4-1.08,3.87-1.14h0c0-1.39,1.05-2.54,2.4-2.68.16-.76.83-1.33,1.63-1.33.92,0,1.67.75,1.67,1.67s-.75,1.67-1.67,1.67c-.79,0-1.45-.55-1.62-1.28h0c-.96.14-1.69.96-1.69,1.95h0c1.48.06,2.83.48,3.91,1.14.39-.3.89-.48,1.42-.48,1.29,0,2.34,1.05,2.34,2.34,0,.93-.55,1.73-1.33,2.11Z"></path>
+                            </svg>
+                            Reddit
+                        </a>
+                        <a href="https://github.com/JohnEmmanuelPacres" class="social-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <section class="content-section fade-in">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                    </svg>
+                    GitHub Projects
+                </h2>
+                
+                <div class="project-item">
+                    <div class="project-title">EcoCalc</div>
+                    <div class="project-desc">Console application that calculates user's carbon footprint with built-in analytics and carbon footprint manager.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                    </div>
+                    <a href="https://github.com/JohnEmmanuelPacres/PacresEcoCalc" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">EcoCalc Plus</div>
+                    <div class="project-desc">Windows forms version of EcoCalc; it is still has features of the console version but with more additional features such as footprint prediction and global footprint view.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Access</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">ASP.NET</span>
+                    </div>
+                    <a href="https://github.com/JohnEmmanuelPacres/EcoCalc_Plus" class="project-link">View on GitHub →</a>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Console Password Manager</div>
+                    <div class="project-desc">Standalone program that stores password locally in the console application; uses AES (Advanced Encryption Standard) for reversibility and SHA-256 (Secure Hash Algorithm) for storing password in local .csv database.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                    </div>
+                    <a href="https://github.com/JohnEmmanuelPacres/Console-Password-Manager" class="project-link">View on GitHub →</a>
+                </div>
+            </section>
+
+            <section class="content-section fade-in">
+                <h2 class="section-title">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                    Courses & Certifications
+                </h2>
+                
+                <div class="course-item">
+                    <div class="course-title">Full Stack Web Development Bootcamp</div>
+                    <div class="course-desc">Comprehensive 24-week program covering HTML, CSS, JavaScript, React, Node.js, and database management.</div>
+                    <strong>Provider:</strong> Tech Academy | <strong>Year:</strong> 2026
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">AWS Cloud Practitioner</div>
+                    <div class="course-desc">Foundational understanding of AWS Cloud services, architecture, and best practices.</div>
+                    <strong>Provider:</strong> Amazon Web Services | <strong>Year:</strong> 2026
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">Advanced JavaScript & ES6+</div>
+                    <div class="course-desc">Deep dive into modern JavaScript features, async programming, and advanced concepts.</div>
+                    <strong>Provider:</strong> Online Learning Platform | <strong>Year:</strong> 2026
+                </div>
+
+                <div class="course-item">
+                    <div class="course-title">React Native Mobile Development</div>
+                    <div class="course-desc">Building cross-platform mobile applications using React Native framework.</div>
+                    <strong>Provider:</strong> Mobile Dev Institute | <strong>Year:</strong> 2026
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="pacres.js"></script>
+</body>
+</html>
