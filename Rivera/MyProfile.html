@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="MyProfile.css">
 </head>
 <body>
 <div class="mainContainer">
-    <div class="profilePicture"></div>
-    <!-- Other content here -->
+    <div class="boxSection" id="box1">
+        <div class="profilePic"></div>
+        <div class=profileName> Carlo Jay O. Rivera </div>
+        <div class ="socials">  
+           <a href="https://www.facebook.com/Caparlopo.rivera/" target="_blank" class="iconClick"> <i class="fa-brands fa-facebook" alt ="Facebook link"></i> </a>
+           <a href="https://www.instagram.com/packhatzz/" target="_blank" class="iconClick"> <i class="fa-brands fa-instagram" alt = "Instagram link" ></i> </a>
+           <a href="https://github.com/Packhat25" target="_blank" class="iconClick"> <i class="fa-brands fa-github" alt= "github link"></i> </a>
+        </div>
+    </div>
+    <div class="boxSection" id="box2">
+        <div class="profileInfo"> 
+            <div class="carousel-container">
+                <div class="carousel" id="carousel"> </div>
+            </div>
+            <div class="flex space-x-4 mt-1">
+                <button id="prevBtn" class="nav-button bg-blue-500 hover:bg-violet-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Previous
+                </button>
+                <button id="nextBtn" class="nav-button bg-blue-500 hover:bg-violet-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Next
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="script.js"></script>
 </body>
 <h1></h1>
 </html>
