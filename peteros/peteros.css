@@ -1,0 +1,14 @@
+body {
+  background-color: #f0f8ff; /* light blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #1e90ff; /* dodger blue */
+  font-size: 3rem;
+}
