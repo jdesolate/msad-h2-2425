@@ -3,36 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First HTML Page</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Labiste _ Profile Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap&family=WDXL+Lubrifont+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="labiste..css" />
   </head>
   <body>
-    <h1 class="title border" style="font-size: 18px" id="firstHeading">
-      Main Topic
-    </h1>
-    <h2>Sub-topic</h2>
-    <h3>Another sub-topic</h3>
-    <p style="color: yellow; font-size: 18px">
-      This is my first paragraph <br />
-      of text on this page.
-    </p>
-    <p style="color: blue; font-size: 18px">This text is blue and large.</p>
+    <header>
+        <div class="center">
+            <p class="header-title"> PROFILE PAGE by VINCE JERBY LABISTE...</p>
+        </div>
+    </header>
 
-    <h1 class="title border">2nd Topic</h1>
-    <hr />
-    <p>And this is a second paragraph.</p>
-    <a href="https://google.com">Go to Google</a>
-    <a href="https://google.com" target="_blank">Go to Google (New Tab)</a>
-    <img src="logopng.png" alt="Company Logo" />
-    <ul>
-      <li>Milk</li>
-      <li>Eggs</li>
-      <li>Bread</li>
-    </ul>
-    <ol>
-      <li>Preheat oven</li>
-      <li>Mix ingredients</li>
-      <li>Bake for 30 mins</li>
-    </ol>
+    <div class="hero">
+      <div class="hero-left">
+        <div class="title">
+          <div class="line">Hi! I'm Vince Jerby Labiste</div>
+          <div class="line" style="font-size: 65px;">WELCOME TO MY PROFILE PAGE</div>
+        </div>
+        <div class="caption">
+          Get to know me better through this simple profile page. I am a Bachelor of Science Computer Engineering Student with a passion for creating beautiful and functional websites.
+          This page presents my first website activity since highschool, so please dont judge hehe.
+          Feel free to explore and learn more about my work and interests.
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="flip-container">
+          <div class="flip-front">
+            <img src="prof2.jpg" alt="side" />
+          </div>
+          <div class="flip-back">
+            <img src="prof.jpg" alt="side-back" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="timeline">
+        <div class="timeline-box">
+          <div class="timeline-title">My Programming Journey Begins</div>
+          <div class="timeline-date">2017</div>
+          <div class="timeline-description">
+            I started coding in 2017 during my programming subject at <b>Philippine Science High School - Central Visayas Campus</b>. There, I was introduced to HTML, CSS, and C++. This was what really piqued my interest in programming and set me on this path.
+          </div>
+        </div>
+        <div class="timeline-box">
+          <div class="timeline-title">Advanced Programming Elective</div>
+          <div class="timeline-date">Grade 11 (2022)</div>
+          <div class="timeline-description">
+            In Grade 11, I took the advanced programming elective, which covered Python and JavaScript. I wasn't able to master them deeply, but it was a valuable part of my journey and gave me a glimpse into more advanced coding.
+          </div>
+        </div>
+        <div class="timeline-box">
+          <div class="timeline-title">College - Computer Engineering</div>
+          <div class="timeline-date">2023 - Current</div>
+          <div class="timeline-description">
+            I am now a BS Computer Engineering student at <b>Cebu Institute of Technology - University</b>. I continue to study more about programming and am hoping to lean towards hardware in the future.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-grid-section">
+      <div class="photo-grid-title">Photo Gallery</div>
+      <div class="photo-grid">
+        <div class="photo-grid-item"><img src="img1.jpg" alt="Gallery 1" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img2.jpg" alt="Gallery 2" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img3.jpg" alt="Gallery 3" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img4.jpg" alt="Gallery 4" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img5.jpg" alt="Gallery 5" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img6.jpg" alt="Gallery 6" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img7.jpg" alt="Gallery 3" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img8.jpg" alt="Gallery 4" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img9.jpg" alt="Gallery 5" onclick="openModal(this)" /></div>
+        <div class="photo-grid-item"><img src="img10.jpg" alt="Gallery 6" onclick="openModal(this)" /></div>
+      </div>
+    </div>
+    <div class="modal" id="imgModal" onclick="closeModal(event)">
+      <button class="modal-close" onclick="closeModal(event)">&times;</button>
+      <img class="modal-content" id="modalImg" src="" alt="Full Size" />
+    </div>
+
+    <footer>
+          THE END  <div class="question"> ?</div>
+    </footer>
+
+    <script>
+      function openModal(imgElem) {
+        var modal = document.getElementById('imgModal');
+        var modalImg = document.getElementById('modalImg');
+        modal.classList.add('active');
+        modalImg.src = imgElem.src;
+        modalImg.alt = imgElem.alt;
+      }
+      function closeModal(event) {
+        if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close')) {
+          document.getElementById('imgModal').classList.remove('active');
+        }
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.getElementById('imgModal').classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
