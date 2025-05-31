@@ -1,15 +1,13 @@
-/* MyProfile.css */
-
 html, body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden; 
 }
 body {
     display: flex;
-    justify-content: center; /* centers horizontally */
-    align-items: center;     /* centers vertically */
+    justify-content: center; 
+    align-items: center;   
     background: linear-gradient(to top, #26063d , #480b75 , #9f8bd0 );
     height: 100vh;
 }
@@ -23,10 +21,10 @@ body {
     color: white;
     padding: 20px;
     border-radius: 50px;
-    width: 80vw; /* Scales with viewport width */
-    height: 85vh; /* Adjusted for more vertical space for content */
+    width: 80vw; 
+    height: 85vh;
     margin: auto;
-    box-sizing: border-box; /* Ensures padding is included in width/height */
+    box-sizing: 
 }
 
 #box1{
@@ -57,13 +55,13 @@ body {
     border-radius: 50%;
     background-color: #480b75;
     border: 2px solid white;
-    /* **Increased size for profile picture, up to 500px** */
-    height: clamp(200px, 25vw, 500px); /* Min 200px, preferred 25vw, Max 500px */
-    width: clamp(200px, 25vw, 500px);  /* Min 200px, preferred 25vw, Max 500px */
+
+    height: clamp(200px, 25vw, 500px);
+    width: clamp(200px, 25vw, 500px);  
     margin-bottom:20px;
 }
 .profileName{
-    font-size: clamp(1.2rem, 2.5vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: bold;
     margin-top: 20px;
     color: rgb(255, 255, 255);
@@ -94,9 +92,8 @@ body {
 }
 .fa-facebook, .fa-instagram,.fa-github{
     color: #ffffff;
-    font-size: clamp(25px, 3vw, 50px); /* Responsive icon size */
+    font-size: clamp(25px, 3vw, 50px);
 }
-
 
 /* Carousel Specific Styles */
 .carousel-container {
@@ -111,7 +108,7 @@ body {
     position: relative;
     overflow: hidden;
 }
-
+/* idk these stuff anymore */
 .carousel {
     /* **MAXIMUM WIDTH ADJUSTMENTS FOR DESKTOP/LARGER SCREENS USING CLAMP()** */
     width: clamp(600px, 95vw, 1500px); /* Min 600px, prefer 95vw, Max 1500px */
@@ -152,6 +149,9 @@ body {
     text-align: center;
 }
 .content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     flex-grow: 1;
     padding: 0 10px;
@@ -167,6 +167,11 @@ body {
 
 
 .card-content {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    width: 700px;
+    height: 600px;
     font-size: clamp(1.8rem, 6vw, 2.8rem); /* Increased font sizes */
     color: #000000;
     line-height: 1.5;
@@ -180,15 +185,19 @@ body {
 .card-content h4 {
     margin-bottom: 10px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
     max-width: 100%;
 }
 .card-content ul {
-    list-style-position: inside;
-    padding-left: 0;
+    list-style-type: disc;
+    list-style-position: outside;
+    text-align: left;
+    background: transparent;
+    padding-left: 20px;
     margin: 0 auto 10px auto;
     max-width: 90%;
 }
-
 
 /* --- Responsive Adjustments --- */
 

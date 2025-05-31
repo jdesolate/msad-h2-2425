@@ -5,7 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextBtn');
 
     const cardData = [
-        { id: 1, title: 'About Me', content: 'Hi, I am Carlo!' },
+        {
+            id: 1,
+            title: 'About Me',
+            content: '<h4><strong><i>Weird/Fun facts</i></strong></h4><ul><li>Reading</li><li>Hiking</li><li>Coding</li></ul>',
+            content2: '<h4><strong><i>Favorite Foods</i></strong></h4><ul><li>Pizza</li><li>Sushi</li><li>Tacos</li></ul>'
+        },
         { id: 2, title: 'Skills & Expertise', content: '<h4>Technical Skills:</h4><ul><li>JavaScript (ES6+)</li><li>HTML5 & CSS3 (including Flexbox, Grid)</li><li>React.js (Basic)</li><li>Python (Intermediate)</li><li>Node.js (Basic)</li><li>SQL (PostgreSQL, MySQL)</li></ul><h4>Soft Skills:</h4><ul><li>Problem-Solving</li><li>Team Collaboration</li><li>Communication</li><li>Adaptability</li><li>Time Management</li></ul>This section allows for detailed lists to highlight specific proficiencies.' },
         { id: 3, title: 'Projects & Portfolio', content: '<p>Explore my latest creations, which showcase my abilities in various domains.</p><ul><li><strong>Project Alpha:</strong> A web application built with [Technologies Used]. <a href="#" target="_blank">View Project</a></li><li><strong>Project Beta:</strong> A data analysis tool developed in Python. <a href="#" target="_blank">View Code</a></li><li><strong>Project Gamma:</strong> Mobile-first design for an e-commerce site. <a href="#" target="_blank">View Design</a></li></ul><p>Each project entry can include descriptions, links, and relevant technologies, allowing for a rich display of work.</p>' }
     ];
@@ -45,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-title">${data.title}</div>
                 <div class="content-container">
                     <div class="card-content">${data.content}</div>
+                    <div class ="card-content">${data.content2}</div>
                 </div>
             `;
             const rotateY = index * angle;
