@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="https://via.placeholder.com/120" alt="Profile Picture" />
+      <h1>Jane Doe</h1>
+      <p>Web Developer | Designer | Tech Enthusiast</p>
+    </div>
+    <div class="profile-body">
+      <div class="info-section">
+        <h3>About Me</h3>
+        <p>Passionate developer with experience in creating responsive and interactive websites. Loves clean code and great UX.</p>
+      </div>
+      <div class="info-section">
+        <h3>Contact Information</h3>
+        <ul>
+          <li>Email: jane.doe@example.com</li>
+          <li>
