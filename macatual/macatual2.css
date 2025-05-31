@@ -1,0 +1,234 @@
+.background{
+    height: auto;
+    background-color: #673b3c;
+    background-image: linear-gradient(to right, #673b3c , #181e41);
+}
+
+.menus{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubutton{
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    margin: 0 30px 0 30px;
+    text-decoration: none;
+}
+
+.menubutton1{
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    margin: 0 30px 0 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    scale: 1.1;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.title1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.introprofilepic{
+    transition: transform 0.3s ease;
+}
+
+.introprofilepic:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+.Aboutme {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    animation: appear linear;
+    animation-duration: 0.5s;
+}
+
+.introprofilepic {
+    border-radius: 20px;
+    max-width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.introdesc {
+    flex: 2;
+    min-width: 300px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.introdesc h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.introdesc p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+  margin-right: 15%;
+}
+
+.item2pic{
+    margin: 30px auto 20px;
+    width: 120px;
+    height: 120px;
+    background-color: #ec9857;
+    background-image: linear-gradient(to right top, #ec9857, #ea625e);
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+
+.hobbies {
+    margin: 0 25%;
+    margin-top: 50px;
+    padding: 50px 20px;
+}
+
+.circles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 100px;
+}
+
+.item2pic {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.circles1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    padding: 20px;
+}
+
+.circles2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.item2pic:hover{
+    transform: scale(1.55);
+    transition: transform 0.3s ease;
+}
+
+.GioLogo {
+    background-color: #ec9857;
+    background-image: linear-gradient(to right top, #ec9857, #ea625e);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.GioLogo a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+}
+
+.ending1{
+    margin: 0 20%;
+}
+
+.ending1 h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ending1 p{
+    color: rgb(230, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 20%;
+    line-height: 1.5;
+}
+
+.bottom {
+    background-color: black;
+    height: 50px;
+    margin: 0 -10px;
+    margin-top: 50px;
+    margin-bottom: -10px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom p {
+    color: rgb(121, 119, 119);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
