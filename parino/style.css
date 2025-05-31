@@ -1,16 +1,16 @@
-body{
-    background-color: #5a8c6d;
+body {
+    background-color: #2364AA;
     margin: 0;
-    font-family:monospace;
-    font-size:20px;
+    font-family: monospace;
+    font-size: 20px;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-    background-color: #77b28c;
-    min-height: 100vh;
+    background-color: #EB5E55;
+    min-height: 105vh;
 }
 
 .pfpbanner {
@@ -20,7 +20,7 @@ body{
     background-color: #333333;
 }
 
-.banner{
+.banner {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -28,9 +28,9 @@ body{
     border: 3px solid #333333;
 }
 
-.pfpwrap{
+.pfpwrap {
     position: absolute;
-    bottom: -25px;        
+    bottom: -15px;        
     left: 50%;
     transform: translateX(-50%);
     width: 200px;           
@@ -41,13 +41,66 @@ body{
     background-color: #333333;
 }
 
-.profile-name{
+.profile-name {
+    position: relative;
+    top: -10px;
     text-align: center;
 }
 
-.pfp{
+.pfp {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  width: 48%;
+}
+
+.description-box {
+    height: 300px; 
+  background-color: #191308;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.hobby-box{
+    height: 230px; 
+  background-color: #191308;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.random-box{
+    width: 48%;
+  height: 550px; 
+  background-color: #413C58;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
