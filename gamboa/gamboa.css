@@ -25,11 +25,13 @@ header {
   align-items: center;
   justify-content: center;
   height: 56px;
+  gap: 24px;
+  position: relative;
 }
 
 .header-cards {
   display: flex;
-  gap: 24px;
+  gap: 18px;
 }
 
 .header-card {
@@ -42,6 +44,7 @@ header {
   border-radius: 12px;
   box-shadow: 0 2px 8px #0002;
   transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
   
 }
 
@@ -55,6 +58,86 @@ header {
   background: #ffe066;
   transform: translateY(-2px) scale(1.08);
 }
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: #ffd700;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  color: #232323;
+  font-size: 1em;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dark-mode-toggle:hover {
+  background: #ffe066;
+}
+
+/* Light mode styles for header */
+body:not(.dark-mode) .sticky-header {
+  background: #f7f7d4;
+  box-shadow: 0 2px 8px #ffe066;
+  
+}
+body:not(.dark-mode) .header-row {
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+body:not(.dark-mode) .header-cards {
+  gap: 18px;
+  display: flex;
+}
+
+body:not(.dark-mode) .header-card {
+  background: #fffbe6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ffe066;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+body:not(.dark-mode) .header-card:hover {
+  background: #ffd700;
+  transform: translateY(-2px) scale(1.08);
+}
+body:not(.dark-mode) .dark-mode-toggle {
+  background: #ffe066;
+  color: #232323;
+}
+body:not(.dark-mode) .dark-mode-toggle:hover {
+  background: #ffd700;
+  color: #232323;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 8px 0;
+    gap: 10px;
+  }
+  .dark-mode-toggle {
+    align-self: flex-end;
+    margin: 8px 16px 0 0;
+    width: auto;
+    max-width: 200px;
+  }
+}
+
 
 .header-card.linkedin:hover img {
   filter: brightness(1) sepia(1) hue-rotate(180deg) saturate(4);
@@ -354,3 +437,39 @@ body.dark-mode .modal-content{
 body.dark-mod .modal.show {
   background: #232323
 } 
+
+/* Dark mode styles for nav header */
+body.dark-mode .sticky-header {
+  background: #232323;
+  box-shadow: 0 2px 8px #0008;
+ 
+}
+
+body.dark-mode .header-row {
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+body.dark-mode .header-cards {
+  gap: 18px;
+  display: flex;
+}
+
+body.dark-mode .header-card {
+  background: #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0008;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+body.dark-mode .header-card:hover {
+  background: #444;
+  transform: translateY(-2px) scale(1.08);
+}
