@@ -1,0 +1,159 @@
+
+    body {
+   background: linear-gradient(to right, #141e30, #243b55); /* dark bluish gradient */
+  color: #e0e0e0; /* soft white text */
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+    }
+
+   .coverphoto{
+   position: relative;       /* Needed to position the profile image inside */
+  width: 100%;
+  height: 300px;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #ccc;
+
+   }
+   .profile{
+width: 120px;
+  height: 120px;
+  background-image: url("profile.jpg"); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;       
+  border: 4px solid white;   
+  position: absolute;
+  bottom: -60px;           
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+   }
+   .container{
+
+    height: 200px; /* Example height */
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+  
+   }
+   .Name{
+     font-size: 24px;
+   }
+   .Name2{
+    font-size: 20px;
+   }
+   .boxhobby{
+    margin-left: auto; /* Automatically push to the right */
+ 
+     width: 400px;
+    height: 150px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 12px;                        /* Rounded corners */
+    background: transparent;                    /* Transparent inside */
+    backdrop-filter: blur(5px);                 /* Optional: adds a glass-like blur effect behind */
+    -webkit-backdrop-filter: blur(5px);         /* Safari support */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    box-sizing: border-box;
+   }
+   .hobby{
+    display: block;       /* Ensure it's treated as a block-level element */
+  text-align: right; 
+  margin-right: 20px;
+   }
+   .likes{
+    display: block;       /* Ensure it's treated as a block-level element */
+  text-align: left; 
+  margin-left:20px;
+  
+   }
+.boxlikes{
+    margin-right: auto; /* Automatically push to the right */
+  width: 400px;
+    height: 150px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 12px;                        /* Rounded corners */
+    background: transparent;                    /* Transparent inside */
+    backdrop-filter: blur(5px);                 /* Optional: adds a glass-like blur effect behind */
+    -webkit-backdrop-filter: blur(5px);         /* Safari support */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    margin-right: auto;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.dislikes{
+  display: block;       /* Ensure it's treated as a block-level element */
+  text-align: right; 
+  margin-right: 20px;
+}
+.boxdislikes{
+
+   margin-left: auto; /* Automatically push to the right */
+ 
+     width: 400px;
+    height: 150px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 12px;                        /* Rounded corners */
+    background: transparent;                    /* Transparent inside */
+    backdrop-filter: blur(5px);                 /* Optional: adds a glass-like blur effect behind */
+    -webkit-backdrop-filter: blur(5px);         /* Safari support */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.modern{
+   border: none;
+  height: 2px;
+  background: linear-gradient(to right, #00f2fe, #4facfe); /* light blue gradient for contrast */
+  margin: 2rem 0;
+  border-radius: 1px;
+  opacity: 0.9;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+  margin: 0;
+  color: #00f2fe;
+  font-size: 1.2rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  text-decoration: none;
+  color: #4facfe;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #00f2fe;
+}
+.proj{
+  display: block;
+  text-align:center;
+}
+
