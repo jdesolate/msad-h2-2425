@@ -7,30 +7,173 @@
         <link rel="stylesheet" href="dolera.css">
     </head>
     <body>
-        <div class="main-container">
-            <div class="left">
-                
+        <div class="disc-selector">
+                <input type="radio" name="tab" id="profile" checked>
+                <input type="radio" name="tab" id="university">
+                <input type="radio" name="tab" id="archive">
             </div>
-            <div class="right">
-                <div class="content-box">
-                    <div id="about-me" class="content-section">
-                        <h2>about me !</h2>
-                        <p>photo. name. nicknames. social media buttons.</p>
-                        <p>zodiac. mbti. likes & pet peeves. hobbies & interests.</p>
+        <div class="main-container">
+            <img src="disc.png" alt="rotating disc" class="rotating-disc">
+            <div class="disc-buttons">
+                <label for="profile" class="disc-btn profile-btn">
+                    <img src="profile-click.png" alt="profile icon">
+                    <span class="label">profile</span>
+                </label>
+                <label for="university" class="disc-btn university-btn">
+                    <img src="university-normal.png" alt="university icon">
+                    <span class="label">uni-verse</span>
+                </label>
+                <label for="archive" class="disc-btn archive-btn">
+                    <img src="archive-normal.png" alt="archive icon">
+                    <span class="label">archive</span>
+                </label>
+            </div>
+            <div class="contents">
+                <div class="profile-section content-section">
+                    <div class="profile-box">
+                        <img src="rexi.jpg" alt="Trixie Dolera" class="profile-pix">
+                        <div class="profile-info">
+                            <h3 class="name">Trixie T. Dolera</h3>
+                            <p class="bio">
+                                <span>20 • she/her • capricorn • intj</span>
+                            </p>
+                            <div class="socmed-buttons">
+                                <a href="https://instagram.com/httqs.xia/" class="socmed-btn" target="_blank"><img src="instagram.svg" alt="Instagram: httqs.xia"></a>
+                                <a href="https://github.com/nsfw-syntaxia" class="socmed-btn" target="_blank"><img src="github.svg" alt="GitHub: nsfw-syntaxia"></a>
+                                <a href="https://linkedin.com/in/trixie-dolera/" class="socmed-btn" target="_blank"><img src="linkedin.svg" alt="LinkedIn: Trixie Dolera"></a>
+                                <a href="https://open.spotify.com/user/16yb5j9trmlsak7cohsllp6hw" class="socmed-btn" target="_blank"><img src="spotify.svg" alt="Spotify: rexi (16yb5j9trmlsak7cohsllp6hw)"></a>
+                                <a href="mailto:xiandrelle@outlook.com" class="socmed-btn"><img src="email.svg" alt="Email: xiandrelle@outlook.com"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div id="university" class="content-section">
-                        <h2>uni-verse !</h2>
-                        <p>school name. course & year level.</p>
-                        <p>skills. projects with links to github repositories.</p>
+                    <div class="about-me-box">
+                        <div class="list-container fun-facts">
+                            <h3 class="title"><strong>fun facts </strong><em>!</em></h3>
+                            <ul class="custom-bullet bullet-star">
+                                <li>born in manila</li>
+                                <li>a competitive introvert</li>
+                                <li>fur mom to 14 cats</li>
+                                <li>registered writer under the nbdb philippines</li>
+                                <li>fantasy, action & thriller lover</li>
+                                <li>has self-diagnosed ocd</li>
+                                <li>back problems? yes. caffeine? no.</li>
+                                <li>can sleep for 15hrs straight or not at all</li>
+                                <li>hates bugs (codes + irl)</li>
+                            </ul>
+                        </div>
+                        <div class="list-container hobbies">
+                            <h3 class="title"><strong>hobbies </strong><em>!</em></h3>
+                            <ul class="custom-bullet bullet-star">
+                                <li>listening to music, audiobooks & true crime podcasts</li>
+                                <li>reading books & manhwas</li>
+                                <li>binge-watching movies / anime / kdramas</li>
+                                <li>creative writing</li>
+                                <li>creating playlists</li>
+                                <li>sorting & organizing things</li>
+                                <li>singing / karaoke</li>
+                                <li>dancing</li>
+                                <li>coding (?)</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div id="fiction" class="content-section">
-                        <h2>archives !</h2>
-                        <p>nickname. pseudonym. social media buttons.</p>
-                        <p>works on apps. status. chapters.</p>
-                        <p>companies. contract category.</p>
+                </div>
+                <div class="university-section content-section">
+                    <div class="student-box">
+                        <img src="citu.png" alt="Cebu Institute of Technology-University" class="acad-icons">
+                        <div class="student-info">
+                            <h3 class="student-course">BS in Computer Engineering</h3>
+                        <p class="student-description">
+                            <span>2nd Year Student @ CIT-U</span>
+                            <br>
+                            <span>PRO of ICpEP.SE R7 CIT-U Chapter</span>
+                        </p>
+                        </div>
+                        <img src="icpep.png" alt="Institute of Computer Engineers" class="acad-icons">
                     </div>
+                    <div class="tech-stack-box">
+                        <h3 class="tech-title"><strong>technologies & tools </strong><em>!</em></h3>
+                        <div class="tech-icons">
+                            <img src="c.png" alt="C" class="tools-icons">
+                            <img src="csharp.png" alt="C#" class="tools-icons">
+                            <img src="html.png" alt="HTML5" class="tools-icons">
+                            <img src="css.png" alt="CSS3" class="tools-icons">
+                            <img src="access.png" alt="MS Access" class="tools-icons">
+                            <img src="photoshop.png" alt="Adobe Photoshop" class="tools-icons">
+                            <img src="canva.png" alt="Canva" class="tools-icons">
+                        </div>
+                    </div>
+                    <div class="projects-box">
+                        <h3 class="projects-title"><strong>projects </strong><em>!</em></h3>
+                        <div class="project-content">
+                            <h4 class="project-name">Hemotica</h4>
+                            <p class="project-description">A desktop application streamlining end-to-end blood management workflows, including records and inventory management, barcodes, analytics, PDF exports, and email notifications.</p>
+                            <div class="project-tags">
+                                <span class="tag">C#</span>
+                                <span class="tag">Windows Forms</span>
+                                <span class="tag">.NET Framework</span>
+                                <span class="tag">Microsoft Access</span>
+                            </div>
+                            <hr class="divider">
+                            <div class="project-footer">
+                                <a href="https://github.com/nsfw-syntaxia/Hemotica" target="_blank" class="github-link">
+                                    <img src="repository.svg" alt="GitHub Repository" class="github-icon">
+                                </a>
+                                <a href="hemotica-details.html" class="details-link">
+                                    <img src="details.svg" alt="View Details" class="details-icon">
+                                </a>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="archive-section content-section">
+                    <h2>archive !</h2>
+                    <p>nickname. pseudonym. social media buttons.</p>
+                    <p>works on apps. status. chapters.</p>
+                    <p>companies. contract category.</p>
                 </div>
             </div>
         </div>
+        <script>
+            const buttons = document.querySelectorAll('.disc-btn');
+            const inputs = document.querySelectorAll('.disc-selector input');
+            const sections = document.querySelectorAll('.content-section');
+            const icons = {
+                profile: {
+                    active: 'profile-click.png',
+                    inactive: 'profile-normal.png'
+                },
+                university: {
+                    active: 'university-click.png',
+                    inactive: 'university-normal.png'
+                },
+                archive: {
+                    active: 'archive-click.png',
+                    inactive: 'archive-normal.png'
+                }
+            };
+            function updateButtons() {
+                buttons.forEach((btn) => {
+                    const forID = btn.getAttribute('for');
+                    const input = document.getElementById(forID);
+                    const isActive = input.checked;
+                    const icon = btn.querySelector('img');
+                    btn.style.backgroundColor = isActive ? '#776ea6' : '#f4f3f8';
+                    icon.src = isActive ? icons[forID].active : icons[forID].inactive;
+                });
+
+                sections.forEach(section => section.style.display = 'none');
+                if (document.getElementById('profile').checked) {
+                    document.querySelector('.profile-section').style.display = 'block';
+                } else if (document.getElementById('university').checked) {
+                    document.querySelector('.university-section').style.display = 'block';
+                } else if (document.getElementById('archive').checked) {
+                    document.querySelector('.archive-section').style.display = 'block';
+                }
+            }
+            inputs.forEach((input) => {
+                input.addEventListener('change', updateButtons);
+            });
+            updateButtons();
+        </script>
     </body>
 </html>
