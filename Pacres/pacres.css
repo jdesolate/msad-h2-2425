@@ -394,6 +394,20 @@
             animation: fadeInUp 0.6s ease forwards;
         }
 
+        .footer {
+            margin-top: 40px; /*space/gap increase*/
+            padding: 16px 0;
+            text-align: center;
+            background: #222;
+            color: #fff;
+            font-size: 0.95em;
+        }
+
+        [data-theme="light"] .footer {
+            background: #f5f5f5;
+            color: #222;
+        }
+
         .fade-in:nth-child(2) { animation-delay: 0.1s; }
         .fade-in:nth-child(3) { animation-delay: 0.2s; }
         .fade-in:nth-child(4) { animation-delay: 0.3s; }
