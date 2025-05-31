@@ -8,6 +8,7 @@ body {
 }
 
 .scroll {
+    filter: blur(7px);
     position: absolute;
     top: 0;
     bottom: 0;
