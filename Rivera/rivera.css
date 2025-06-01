@@ -351,7 +351,7 @@ body::before {
         font-size: clamp(1.2rem, 3vw, 2rem); /* Adjusted font size */
     }
     .card-content {
-        font-size: clamp(0.8rem, 1.8vw, 1.4rem); /* Adjusted font size */
+        font-size: clamp(0.8rem, 1.8vw, 1.4rem); /* Adjusted font size more comments for commiting*/
     }
     .profileInfo > .flex.space-x-4.mt-60 {
         margin-top: 20px !important; 
