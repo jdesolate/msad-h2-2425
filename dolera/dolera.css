@@ -1,0 +1,39 @@
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #776ea6;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    overflow: visible;
+    background-color: #f6f6f9;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+}
