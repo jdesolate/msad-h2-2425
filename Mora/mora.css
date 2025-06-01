@@ -1,57 +1,183 @@
 body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1f1c2c;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to left, #4b4081, #1f1c2c);
+  color: #fff;
+  height: 100vh;
+  padding: 0; /* Remove left padding */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
 
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+.pfp {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  position: relative; /* Change to relative for easier centering */
+  margin-top: 12rem;
+  margin-bottom: 1rem;
+  left: 0;
+  z-index: 10;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .card {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      max-width: 400px;
-      text-align: center;
-    }
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
 
-    .pfp {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      margin-bottom: 1rem;
-      object-fit: cover;
-    }
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center; /* Center cards horizontally */
+  margin-top: 2rem;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+.card,
+.hobbies-card,
+.Tetromino-card {
+  margin-top: 0; /* Remove extra margin for better vertical alignment */
+}
 
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
 
-    .tag {
-      background-color: #444;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      display: inline-block;
-      margin: 5px;
-    }
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
-    a {
-      color: #00e0ff;
-      text-decoration: none;
-    }
+.tag {
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 5px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a {
+  color: #00e0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.about-me {
+  margin-top: 1.5;
+  font-size: 1rem;
+  border-top: 1px solid #555;
+}
+
+about-me h2 {
+margin-bottom: 0.5rem;
+color: #00e0ff;
+}
+
+.about-me p {
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+.hobbies-card {
+  margin-top: 0rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 200px;
+}
+
+.hobbies-card h2 {
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+
+.hobbies-card ul {
+  list-style-type: "• ";
+  padding-left: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.Tetromino-card {
+  margin-top: 0rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 200px;
+}
+
+.Tetromino-card h2 {
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+
+.Tetromino-card p {
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-me-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 300px;
+  margin-top: 0;
+}
+.about-me-card h2 {
+  color: #00e0ff;
+  margin-bottom: 1rem;
+}
+.about-me-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.main-info-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 300px;
+  margin-top: -2.5rem;
+  text-align: center;
+}
+
+.main-info-card hr {
+  border: none;
+  border-top: 2px solid #838383b2;
+  margin: 1rem 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-link {
+  color: #00e0ff;
+  font-weight: bold;
+  text-decoration: underline;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+.project-link:hover, .project-link:focus {
+  color: #fff200;
+  outline: none;
+}
