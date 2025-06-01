@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {   id: 2,
             title: 'Educational Background',
-            content: '<h4>Schools Attended</h4><ul><li><strong>Elementary</strong>:Lahug Elementary School<p>(2011-2017)</p></li><li> <b>High School</b>:University of Cebu <p>(2017-2023)</p></li><li><b>College</b>: Cebu Institute of Technology- University<p>(2023-present)</p></li></ul>',
+            content: '<h4>Schools Attended</h4><ul><li><strong>Elementary</strong>:Lahug Elementary School<p>(2011-2017)</p></li><li> <b>High School</b>:University of Cebu <p>(2017-2023)</p></li><li><b>College</b>: Cebu Institute Institute of Technology- University<p>(2023-present)</p></li></ul>',
             content2:''
         },
         { id: 3, title: 'Projects & Portfolio', content: '<h4>Past Projects</h4><ul><li>Console based bookmark Management System<p>My first project ever made in college <br>(coded in C#)<br><a href="https://github.com/Packhat25/bookmark-management-system" target="_blank" class="URLlink" >Click here to visit!</a></p></li><li>NoteWorthy<p>A windows application of the console based bookmark management system<br><a href="https://github.com/Packhat25/NoteWorthy" target="_blank" class="URLlink" >Click here to visit!</a></p></li>' }
@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function getCarouselRadius() {
         const vw = window.innerWidth;
         if (vw < 480) {
-            return 300; // Adjusted for smaller screens (increased)
+            return 250; // Adjusted for smaller screens (decreased)
         } else if (vw < 768) {
-            return 500; // Adjusted for medium screens (increased)
+            return 400; // Adjusted for medium screens (decreased)
         } else if (vw < 1024) {
-            return 700; // Adjusted for larger tablets/small laptops (increased)
+            return 600; // Adjusted for larger tablets/small laptops (decreased)
         } else {
-            return 900; // Adjusted for desktops (increased)
+            return 800; // Adjusted for desktops (decreased)
         }
     }
 
