@@ -94,7 +94,8 @@ body::before {
     margin-bottom:20px;
 }
 .profileName{
-    font-size: clamp(1.1rem, 2.2vw, 1.9rem); 
+    font-size: clamp(1rem, 2.2vw, 1.5rem); 
+    gap-top:0px;
     font-weight: bold;
     margin-top: 20px;
     color: rgb(255, 255, 255);
@@ -125,7 +126,7 @@ body::before {
 }
 .fa-facebook, .fa-instagram,.fa-github{
     color: #ffffff;
-    font-size: clamp(22px, 2.8vw, 45px); 
+    font-size: clamp(15px, 2.5vw, 30px); 
 }
 
 /* Carousel Specific Styles */
@@ -144,8 +145,8 @@ body::before {
 
 /* idk these stuff down there*/
 .carousel {
-    width: clamp(400px, 80vw, 1000px);
-    height: clamp(350px, 75vw, 700px); 
+    width: clamp(260px, 56vw, 600px); /* Further reduced */
+    height: clamp(210px, 51vw, 440px); /* Further reduced */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
@@ -171,8 +172,9 @@ body::before {
     will-change: transform;
 }
 
+/* Card Content and Title Styles - Adjusted clamp() values for readability */
 .card-title {
-    font-size: clamp(3rem, 8vw, 4.2rem); 
+    font-size: clamp(1.4rem, 4vw, 2.2rem); /* Further reduced */
     font-weight: bold;
     color: #1a202c;
     margin-bottom: 15px;
@@ -182,8 +184,8 @@ body::before {
 .content-container {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
-    align-items: center;
+    align-items: space-between;
+    gap:5px;
     width: 100%;
     flex-grow: 1;
     padding: 0 10px;
@@ -196,16 +198,14 @@ body::before {
 .content-container::-webkit-scrollbar {
     display: none;
 }
-
 .card-content {
     font-family:Georgia, 'Times New Roman', Times, serif;
     border-radius: 20px;
     border: 3px solid #000000;
     background-color: #eadcf7;
-    /* REMOVED FIXED WIDTH AND HEIGHT */
-    width: 90%; /* Adjusted to be responsive */
-    height: auto; /* Adjusted to be responsive */
-    font-size: clamp(1.3rem, 3.5vw, 2.2rem); /* Slightly increased clamp values */
+    width: 100%; 
+    height: auto; 
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Further reduced */
     color: #ffffff;
     line-height: 1.5;
     text-align: center;
@@ -220,12 +220,13 @@ body::before {
     background-color: #9f8bd0;
     border-radius: 18px;
     max-width: 100%;
+    color: #ffffff; 
 }
 .card-content ul {
     list-style-type: disc;
     list-style-position: outside;
     text-align: left;
-    font-size: clamp(1rem, 2.2vw, 1.7rem); /* Slightly increased clamp values */
+    font-size: clamp(1rem, 1.5vw, 1.2rem); /* Slightly increased clamp values */
     color: #000000;
     background: transparent;
     padding-left: 20px;
@@ -234,7 +235,7 @@ body::before {
 }
 .card-content p {
     text-align: center;
-    font-size: clamp(0.9rem, 2vw, 1.6rem); /* Slightly increased clamp values */
+    font-size: clamp(0.8rem, 1.6vw, 1rem); 
     color: #000000;
     margin-bottom: 15px;
 }
@@ -249,9 +250,8 @@ body::before {
 
 /* --- Responsive Adjustments --- */
 
-@media (max-width: 1024px) { /* Adjust for medium screens like laptops */
+@media (max-width: 1024px) { 
     .profilePic {
-        /* Increased size for profile picture for this breakpoint */
         height: clamp(100px, 15vw, 250px);
         width: clamp(100px, 15vw, 250px);
     }
@@ -259,19 +259,18 @@ body::before {
         font-size: clamp(1rem, 2vw, 1.8rem);
     }
     .carousel-container {
-        max-width: 1400px; /* Increased for this breakpoint */
+        max-width: 1400px;
         perspective: 1800px;
     }
     .carousel, .card {
-        /* **WIDER MAX SIZE FOR THIS BREAKPOINT** */
-        width: clamp(300px, 85vw, 800px); 
-        height: clamp(250px, 70vw, 550px); /* Height kept similar to main */
+        width: clamp(180px, 61vw, 470px); /* Further reduced */
+        height: clamp(140px, 46vw, 340px); /* Further reduced */
     }
     .card-title {
-        font-size: clamp(3rem, 8vw, 5rem);
+        font-size: clamp(2rem, 5vw, 3.5rem); 
     }
     .card-content {
-        font-size: clamp(1.6rem, 5vw, 2.5rem);
+        font-size: clamp(1.2rem, 3vw, 2rem); 
     }
 }
 
@@ -309,14 +308,14 @@ body::before {
         max-width: 100%;
     }
     .carousel, .card {
-        width: clamp(200px, 85vw, 450px); /* Adjusted for smaller screens */
-        height: clamp(250px, 75vw, 500px); /* Adjusted for smaller screens */
+        width: clamp(110px, 71vw, 290px); /* Further reduced */
+        height: clamp(140px, 61vw, 340px); /* Further reduced */
     }
     .card-title {
-        font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* Adjusted font size */
+        font-size: clamp(0.9rem, 2.4vw, 1.6rem); /* Further reduced */
     }
     .card-content {
-        font-size: clamp(0.9rem, 2vw, 1.6rem); /* Adjusted font size */
+        font-size: clamp(0.5rem, 1.3vw, 1rem); /* Further reduced */
     }
 }
 
@@ -344,14 +343,14 @@ body::before {
         perspective: 1200px;
     }
     .carousel, .card {
-        width: clamp(180px, 90vw, 350px); /* Adjusted for smaller screens */
-        height: clamp(200px, 90vw, 400px); /* Adjusted for smaller screens */
+        width: clamp(80px, 76vw, 190px); /* Further reduced */
+        height: clamp(110px, 76vw, 240px); /* Further reduced */
     }
     .card-title {
-        font-size: clamp(1.2rem, 3vw, 2rem); /* Adjusted font size */
+        font-size: clamp(0.7rem, 1.8vw, 1.4rem); /* Further reduced */
     }
     .card-content {
-        font-size: clamp(0.8rem, 1.8vw, 1.4rem); /* Adjusted font size more comments for commiting*/
+        font-size: clamp(0.4rem, 1.1vw, 0.8rem); /* Further reduced */
     }
     .profileInfo > .flex.space-x-4.mt-60 {
         margin-top: 20px !important; 
