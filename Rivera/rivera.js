@@ -5,14 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('nextBtn');
 
     const cardData = [
-        {
+         {
             id: 1,
             title: 'About Me',
-            content: '<h4><strong><i>Weird/Fun facts</i></strong></h4><ul><li>Reading</li><li>Hiking</li><li>Coding</li></ul>',
-            content2: '<h4><strong><i>Favorite Foods</i></strong></h4><ul><li>Pizza</li><li>Sushi</li><li>Tacos</li></ul>'
+            content: '<h4><strong><i>Weird/Fun facts</i></strong></h4><ul><li>I have lived in Luzon, Visayas and Mindanao</li><li>born in Manila</li><li>I have once stayed awake for almost 72 hours</li><li>coffee enjoyer</li><li>immune to caffeine</li></ul>',
+            content2: '<h4><strong><i>Hobbies</i></strong></h4><ul><li>listening to music!</li><li>singing!(tho im not good at it)</li><li>reading novels/sangas</li><li>watching anime/movies/TV shows!</li><li>playing ames!</li><li>playing the bass!</li></ul>'
         },
-        { id: 2, title: 'Skills & Expertise', content: '<h4>Technical Skills:</h4><ul><li>JavaScript (ES6+)</li><li>HTML5 & CSS3 (including Flexbox, Grid)</li><li>React.js (Basic)</li><li>Python (Intermediate)</li><li>Node.js (Basic)</li><li>SQL (PostgreSQL, MySQL)</li></ul><h4>Soft Skills:</h4><ul><li>Problem-Solving</li><li>Team Collaboration</li><li>Communication</li><li>Adaptability</li><li>Time Management</li></ul>This section allows for detailed lists to highlight specific proficiencies.' },
-        { id: 3, title: 'Projects & Portfolio', content: '<p>Explore my latest creations, which showcase my abilities in various domains.</p><ul><li><strong>Project Alpha:</strong> A web application built with [Technologies Used]. <a href="#" target="_blank">View Project</a></li><li><strong>Project Beta:</strong> A data analysis tool developed in Python. <a href="#" target="_blank">View Code</a></li><li><strong>Project Gamma:</strong> Mobile-first design for an e-commerce site. <a href="#" target="_blank">View Design</a></li></ul><p>Each project entry can include descriptions, links, and relevant technologies, allowing for a rich display of work.</p>' }
+        {   id: 2,
+            title: 'Educational Background',
+            content: '<h4>Schools Attended</h4><ul><li><strong>Elementary</strong>:Lahug Elementary School<p>(2011-2017)</p></li><li> <b>High School</b>:University of Cebu <p>(2017-2023)</p></li><li><b>College</b>: Cebu Institute Institute of Technology- University<p>(2023-present)</p></li></ul>',
+            content2:''
+        },
+        { id: 3, title: 'Projects & Portfolio', content: '<h4>Past Projects</h4><ul><li>Console based bookmark Management System<p>My first project ever made in college <br>(coded in C#)<br><a href="https://github.com/Packhat25/bookmark-management-system" target="_blank" class="URLlink" >Click here to visit!</a></p></li><li>NoteWorthy<p>A windows application of the console based bookmark management system<br><a href="https://github.com/Packhat25/NoteWorthy" target="_blank" class="URLlink" >Click here to visit!</a></p></li>' }
     ];
 
     const numCards = cardData.length;
@@ -28,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function getCarouselRadius() {
         const vw = window.innerWidth;
         if (vw < 480) {
-            return 400; // Increased for very small mobile screens
+            return 250; // Adjusted for smaller screens (decreased)
         } else if (vw < 768) {
-            return 650; // Increased for tablets/smaller desktops
+            return 400; // Adjusted for medium screens (decreased)
         } else if (vw < 1024) {
-            return 900; // Increased for medium screens
+            return 600; // Adjusted for larger tablets/small laptops (decreased)
         } else {
-            return 1200; // **GREATLY INCREASED FOR LARGE DESKTOPS**
+            return 800; // Adjusted for desktops (decreased)
         }
     }
 
@@ -47,12 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.classList.add('card');
             card.innerHTML = `
-                <div class="card-title">${data.title}</div>
-                <div class="content-container">
-                    <div class="card-content">${data.content}</div>
-                    <div class ="card-content">${data.content2}</div>
+                ${data.title ? `<div class="card-title">${data.title}</div>` : ''}
+                 <div class="content-container"> <div class="card-content">${data.content}</div>${data.content2 ? `<div class="card-content">${data.content2}</div>` : ''}
                 </div>
-            `;
+                `;
             const rotateY = index * angle;
             card.style.transform = `rotateY(${rotateY}deg) translateZ(${carouselTranslateZ}px)`;
             carousel.appendChild(card);
