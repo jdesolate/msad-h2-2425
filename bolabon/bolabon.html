@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Own Profile</title>
+  <link rel="stylesheet" href="profilepage.css">
+</head>
+<body>
+
+  <button id="darkModeToggle">Toggle Dark Mode</button>
+
+  <div class="profile-card">
+    <h2>My Own Profile</h2>
+
+    <div class="profile-photo">
+    <img src="johann.jpg" alt="Johann's Photo">
+    </div>
+
+    <div class="info">
+      <p><strong>Name:</strong> Johann O. Bolabon</p>
+      <p><strong>Contact No:</strong> 09283428098</p>
+      <p><strong>Email:</strong> bolabonjohann1@gmail.com</p>
+    </div>
+
+    <div class="about">
+      <h3>About Myself</h3>
+      <p>I am Johann, 21 years old. I enjoy learning new things, especially related to tech.</p>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        toggle.textContent = "Switch to Light Mode";
+      } else {
+        toggle.textContent = "Switch to Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>
