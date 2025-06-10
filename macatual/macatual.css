@@ -1,7 +1,7 @@
 .background{
     height: 2000px;
-    background-color: #ae6e40;
-    background-image: linear-gradient(to right, #ae6e40 , #181e41);
+    background-color: #673b3c;
+    background-image: linear-gradient(to right, #673b3c , #181e41);
 }
 
 .menus{
@@ -18,35 +18,353 @@
     font-family: 'Quicksand';
     font-size: 18px;
     margin: 0 30px 0 30px;
+    text-decoration: none;
 }
 
-.profile1{
+.menubutton1{
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    margin: 0 30px 0 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    scale: 1.1;
+}
+
+.profile1 {
     padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    animation: appear2 linear;
+    animation-duration: 0.3s;
 }
 
-#name{
+#name {
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     font-size: 100px;
-    margin-left: 13%;
-    line-height: 1;
+    margin-left: 10%;
+    line-height: 1.1;
 }
 
-#namedesc{
-    margin-top: -80px;
+#namedesc {
+    display: block;
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: 700;
-    margin-left: 13%;
+    margin-bottom: 10px;
     line-height: 1.2;
 }
 
-.profilepic{
-    border-radius: 350px 200px;
+.profilepic {
+    border-radius: 100px 100px 30px;
+    margin-right: 15%;
+    margin-left: 10%;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    transition: border-radius 0.5s;
+}
+
+.profilepic:hover{
+    border-radius: 50%;
+}
+
+.intro {
+    padding: 50px;
+    background-color: rgba(235, 132, 89, 0);
+    background-image: linear-gradient(to right, rgba(235, 132, 89, 0.3), rgba(234, 100, 94, 0.3));
+    border-radius: 20px;
+    margin: 0 15%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5; 
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes secondappear {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appear2 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.introprofilepic {
+    border-radius: 20px;
+    max-width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+    margin-left: 8%;
     margin-right: 10%;
+}
+
+.introdesc {
+    flex: 2;
+    min-width: 300px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.techstack {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 -10px;
+    margin-top: 100px;
+    padding: 50px 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.techtitle{
+    margin-bottom: 10px;
+}
+
+.techtitle:hover .divider1 {
+    width: 100%;
+}
+
+.techstack h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    margin-top: 5px;
+}
+
+.divider1 {
+    background-color: #ffffff;
+    height: 2px;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 20px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    transition: width 0.3s ease;
+}
+
+.techstack-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.techstack-logos img {
+    height: 100px;
+    object-fit: contain;
+    background-color: white;
+    padding: 1px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    animation: secondappear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.techstack-logos img:hover {
+    transform: scale(1.05);
+}
+
+.services{
+    margin: 0 19%;
+    margin-top: 130px;
+}
+
+.services h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.services1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.services2{
+    background-color: #ec9857;
+    background-image: linear-gradient(to right top, #ec9857, #ea625e);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: secondappear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.services2:hover{
+    transform: scale(1.05);
+}
+
+.services2 img{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.services2 h2{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.services2 p{
+    color: rgb(230, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 10%;
+    margin-bottom: 30px;
+}
+
+.gallery{
+    margin: 0 10%;
+    margin-top: 100px;
+}
+
+.gallery h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.gallery1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.gallery1 img {
+  width: 100%;
+  aspect-ratio: 1 / 1;        
+  object-fit: cover;          
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.gallery1 img:hover {
+  transform: scale(1.05);
+}
+
+.GioLogo {
+    background-color: #ec9857;
+    background-image: linear-gradient(to right top, #ec9857, #ea625e);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.GioLogo a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+}
+
+.ending1{
+    margin: 0 20%;
+}
+
+.ending1 h1{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ending1 p{
+    color: rgb(230, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 20%;
+    line-height: 1.5;
+}
+
+.bottom {
+    background-color: black;
+    height: 50px;
+    margin: 0 -10px;
+    margin-top: 50px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom p {
+    color: rgb(121, 119, 119);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
 }
