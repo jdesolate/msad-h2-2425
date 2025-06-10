@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="Tadiamon.css" />
+  </head>
+  <body>
+    <div class="Profile_Box">
+      <div class="Cover_Photo">
+        <image src="Images/Cover Photo.jpg" alt="Sunrise by the beach" />
+      </div>
+      <div class="Profile_Photo">
+        <img src="Images/Profile Photo.jpg" alt="A picture of Sean" />
+      </div>
+      <div class="Profile Info">
+        <h1>Sean Richard Tadiamon</h1>
+        <p class="Bio">Striving to be better than yesterday.</p>
+      </div>
+      <nav>
+        <a class="NavLinks" href="#" onclick="loadContent('About_Me.html')"
+          >About Me</a
+        >
+        <a class="NavLinks" href="#" onclick="loadContent('Projects.html')"
+          >Projects</a
+        >
+        <a class="NavLinks" href="#" onclick="loadContent('Photos.html')"
+          >Photos</a
+        >
+      </nav>
+      <div class="Socials-Container">
+        <a
+          class="Socials"
+          href="https://www.facebook.com/seanrichard.tadiamon.9"
+          target="_blank"
+        >
+          <img src="Images/facebook icon.png" alt="Facebook Logo" />
+        </a>
+        <a
+          class="Socials"
+          href="https://www.instagram.com/sean_tadz/"
+          target="_blank"
+        >
+          <img src="Images/instagram icon.png" alt="Instagram Logo" />
+        </a>
+        <a
+          class="Socials"
+          href="https://github.com/NaesCode?tab=overview&from=2025-05-01&to=2025-05-31"
+          target="_blank"
+        >
+          <img src="Images/github icon.png" alt="GitHub Logo" />
+        </a>
+      </div>
+    </div>
+    <hr />
+
+    <iframe
+      id="contentFrame"
+      src="About_Me.html"
+      width="100%"
+      height="500px"
+      style="border: none"
+    >
+    </iframe>
+
+    <script>
+      function loadContent(page) {
+        document.getElementById("contentFrame").src = page;
+      }
+    </script>
+  </body>
+</html>
