@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies</title>
+  <link rel="stylesheet" href="hobbies.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <a href="Abella.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Home</span>
+    </a>
+    <h1>My Hobbies</h1>
+  </header>
+  <section class="section-hobbies">
+
+  <!-- Drawing/Painting Section -->
+<div class="hobby-section">
+  <div class="hobby-title">Drawing / Painting</div>
+  <div class="hobbies-carousel" data-carousel>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic4.png" alt="Drawing 4" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic5.png" alt="Drawing 5" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic6.png" alt="Drawing 6" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic7.png" alt="Drawing 7" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic8.png" alt="Drawing 8" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic9.png" alt="Drawing 9" />
+    </div>
+    <div class="hobby-card">
+      <img src="hobbies/pics/pic10.png" alt="Drawing 10" />
+    </div>
+  </div>
+  <div class="carousel-nav">
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+  </div>
+</div>
+
+    <!-- DIY Crafts Section -->
+    <div class="hobby-section">
+      <div class="hobby-title">DIY Crafts</div>
+      <div class="hobbies-carousel" data-carousel>
+        <div class="hobby-card active">
+          <img src="hobbies/crafts/pic1.png" alt="DIY Craft 1" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/crafts/pic2.png" alt="DIY Craft 2" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/crafts/pic3.png" alt="DIY Craft 3" />
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+    </div>
+
+    <!-- Anime Section -->
+    <div class="hobby-section anime-section">
+      <div class="hobby-title">Anime / Manga</div>
+      <div class="hobbies-carousel" data-carousel>
+        <div class="hobby-card active">
+          <img src="hobbies/animes/anime1.jpg" alt="Anime 1" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime2.jpg" alt="Anime 2" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime3.jpg" alt="Anime 3" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime4.jpg" alt="Anime 4" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime5.jpg" alt="Anime 5" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime6.jpg" alt="Anime 6" />
+        </div>
+    
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime8.jpg" alt="Anime 8" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime9.jpg" alt="Anime 9" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime10.jpg" alt="Anime 10" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime11.jpg" alt="Anime 11" />
+        </div>
+       
+        <div class="hobby-card">
+          <img src="hobbies/animes/anime13.jpg" alt="Anime 13" />
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+    </div>
+
+    <!-- Video Games Section -->
+    <div class="hobby-section">
+      <div class="hobby-title">Video Games</div>
+      <div class="hobbies-carousel" data-carousel>
+        <div class="hobby-card active">
+          <img src="hobbies/games/game.jpg" alt="Game" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/games/game1.jpg" alt="Game 1" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/games/game2.jpg" alt="Game 2" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/games/game3.jpg" alt="Game 3" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/games/genshin.jpg" alt="Genshin Impact" />
+        </div>
+        <div class="hobby-card">
+          <img src="hobbies/games/genshin.png" alt="Genshin Impact Screenshot" />
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+    </div>
+
+  </section>
+  <script>
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+      const cards = carousel.querySelectorAll('.hobby-card');
+      const nextBtn = carousel.nextElementSibling.querySelector('.next');
+      const prevBtn = carousel.nextElementSibling.querySelector('.prev');
+      let activeIndex = 0;
+
+      function updateCarousel() {
+        cards.forEach((card, i) => {
+          card.classList.toggle('active', i === activeIndex);
+        });
+      }
+
+      nextBtn.addEventListener('click', () => {
+        activeIndex = (activeIndex + 1) % cards.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        updateCarousel();
+      });
+
+      updateCarousel();
+    });
+  </script>
+</body>
+</html>

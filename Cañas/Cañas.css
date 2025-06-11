@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+  background-color: #4285f4;
+}
+
+.experience {
+  background-color: #34a853;
+}
+
+.hobbies {
+  background-color: #fbbc05;
+  color: #333;
+}
+
+.skills {
+  background-color: #ff6d00;
+}
+
+.qualities {
+  background-color: #9c27b0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.profile img {
+  float: right;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+}
+
+.profile p {
+  margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+  .profile img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
