@@ -1,0 +1,188 @@
+   
+    body{
+        background-color:  #5d7b31;
+    }
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* color: #050f21; */
+    }
+
+    .navbar{
+    position: fixed;
+    width: 100%;
+    padding: 25px 0;
+    background:rgb(51, 86, 132);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+    }
+
+    .navbar .logo a span{
+    color: rgb(17, 45, 29);
+    }
+
+    .max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    }
+
+    .navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+        }
+    
+    .navbar .menu li {
+    list-style: none;
+    display:  inline-block;
+    }
+
+    .navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    }
+
+    .navbar .menu li a:hover{
+    color:  rgb(104, 222, 255);
+    }
+
+    /* pfp */
+
+    .home{
+        display: flex;
+        background: url("1198914-2560x1440-desktop-hd-studio-ghibli-wallpaper-photo.jpg") no-repeat center;
+        height: 100vh;
+        color: #fff;
+        min-height: 200px;
+        background-size: cover;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .pfp{
+       margin: 135px 0 25px;
+    }
+
+    .pfp img{
+        width: 20%;
+        border-radius: 5%;
+        box-shadow: 50px;
+    }
+
+    .home .max-width{
+        /* margin: auto 0px auto 75px; */
+        margin-bottom: 695px;
+        margin-left: -30px;
+    }
+
+    .home .home-content .text-1{
+    font-size: 27px;
+    }
+
+    .home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    }
+
+    .home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+    }
+
+    .home .home-content .text-3 span{
+    color:  rgb(17, 45, 29);
+    font-weight: 500;
+    }
+
+    /* Wrapper */
+
+    .wrapper-main{
+        width: 1600px;
+        margin: 0 auto;
+    }
+
+    /* Footer */
+
+    .footer-main{
+        width: 100%;
+        padding: 60px 0 100px;
+        background-color: #a6c9eb;
+    }
+  
+    .footer-main-flex{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        opacity: 0.75;
+
+    }
+
+    .art{
+        flex-basis: 20%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .art img{
+        width: 130%;
+        border-radius: 10%;
+        border-color: #fff;
+    }
+
+    .art video{
+        width: 130%;
+        border-radius: 10%;
+        background-color: #beeafd;
+    }
+
+    /* button */
+    
+    .button a{
+        padding: 10px 50px;
+        margin: 10px 750px 40px;
+        /* margin: 0 auto; */
+        /* border: 2px solid #fff; */
+        font-family: 'Ubuntu', sans-serif;
+        font-size: large;
+        font-weight: 550;
+        transition: all ease-in-out 200ms;
+    }
+
+    .button a:link, a:visited {
+        background-color: #0d351a;
+        color: white;
+        padding: 15px 45px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 4%;
+    }
+
+    .button a:hover, a:active {
+        background-color: #1a6533;
+    }   
+
+    .footer-main h1{
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 105px;
+    }
+
+    .title{
+        color: #fff;
+    }
+    
