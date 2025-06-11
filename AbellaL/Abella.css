@@ -1,0 +1,388 @@
+/* ==== GLOBAL SETTINGS ==== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.page-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y start;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== SECTION COLORS ==== */
+.section-profile {
+  background-color: #283D3B;
+  color: white;
+}
+
+.section-about {
+  background-color: #283D3B;
+}
+
+
+/* ==== PROFILE WRAPPER ==== */
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1100px;
+  min-height: 80vh;
+  background-color: #3C4F4D;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  position: relative; 
+}
+
+/* ==== PROFILE LEFT ==== */
+.profile-left-bg {
+  background: #283D3B;
+  width: 200%;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+
+  /* vertical arch effect */
+  border-top-right-radius: 300% 200%;
+  border-bottom-right-radius: 0% 0%;
+  border-top-left-radius: 300% 200%;
+  border-bottom-left-radius: 0% 0%;
+
+  /* MOVE TO RIGHT */
+  margin-left: 10px; /* adjust as needed */
+  margin-top: 90px;
+
+}
+
+
+.profile-photo {
+  width: 110%;
+  max-width: 500px;
+  object-fit: contain;
+  filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.3));
+  position: absolute;    /* Take the image out of normal flow */
+  left: 60%;             /* Center horizontally */
+  transform: translateX(-50%);
+  bottom: 0;             /* Drag the image to the bottom of the container */
+  margin: 0;             /* Remove any margin */
+}
+
+/* ==== PROFILE RIGHT ==== */
+.profile-right {
+  flex: 1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #D9BCAF;
+  font-family: 'Marcellus SC', serif;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+.profile-desc {
+  font-size: 1.1rem;
+  color: #D9BCAF;
+  line-height: 1.6;
+}
+
+/* Compact profile description for smaller viewports */
+.compact-profile-desc {
+  font-size: 0.98rem;
+  color: #D9BCAF;
+  line-height: 1.5;
+  margin-bottom: 0;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  white-space: pre-line;
+}
+
+/* ==== LEAF BUTTONS ==== */
+.leaf-buttons {
+  display: flex;
+  gap: 16px;         /* Slightly smaller gap */
+  margin-top: 24px;  /* Move buttons up a bit */
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.cta-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 72px;
+  padding-left: 60px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(121, 86, 99, 0.25);
+  color: white;
+  font-size: 20px;
+  font-family: 'Marcellus SC', serif;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.btn-image {
+  position: absolute;
+  height: auto;
+}
+
+.cta-button:nth-child(1) .btn-image { width: 80px; left: -30px; top: 50%; transform: translateY(-50%); }
+.cta-button:nth-child(2) .btn-image { width: 95px; left: -40px; top: 20%; transform: translateY(-50%); }
+.cta-button:nth-child(3) .btn-image { width: 105px; left: -35px; top: 10%; transform: translateY(-50%); }
+
+/* ==== SOCIAL ICONS ==== */
+.social-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;   /* Aligns buttons to the right horizontally */
+  align-self: flex-end;        /* Aligns the whole group to the right in the flex column */
+}
+.icon-button {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(121, 86, 99, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D9BCAF;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(121, 86, 99, 0.4);
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 900px) {
+  .profile-wrapper {
+    flex-direction: column;
+  }
+
+  .profile-left-bg {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .profile-photo {
+    width: 80vw;
+  }
+
+  .profile-right {
+    padding: 24px 16px;
+  }
+
+  .leaf-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-desc {
+    display: none; /* Hide the regular description */
+  }
+
+  .compact-profile-desc {
+    display: block; /* Show the compact description */
+  }
+}
+
+
+/* ==== ABOUT SECTION ==== */
+.section-about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 60px 0;
+  background:
+    linear-gradient(to bottom, #283D3B 0%, rgba(1,22,39,0.85) 20%, rgba(40,61,59,0.9) 100%),
+    url('images/DSC_7561-01.jpeg') center/cover no-repeat;
+  color: #D9BCAF;
+  overflow: hidden;
+}
+
+/* Header bar for About Me | Projects */
+.about-projects-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Marcellus SC', serif;
+  color: #D9BCAF;
+  margin-bottom: 20px;
+  gap: 1rem;
+  text-align: center;
+}
+
+.about-projects-header span {
+  padding: 0 12px;
+  border-right: 2px solid #D9BCAF;
+}
+
+.about-projects-header span:last-child {
+  border-right: none;
+}
+
+/* Flex layout for content */
+.about-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Individual column */
+.about-col {
+  flex: 1 1 0;
+  padding: 40px;
+  min-width: 320px;
+}
+
+/* Subheadings inside each column */
+.about-heading,
+.projects-heading {
+  font-size: 2rem;
+  font-family: 'Marcellus SC', serif;
+  margin-bottom: 16px;
+  color: #D9BCAF;
+  text-align: left;
+}
+
+
+/* Description text */
+.about-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #D9BCAF;
+  font-family: 'Segoe UI', serif;
+}
+
+/* Divider between About Me and Projects */
+.about-vertical-divider {
+  width: 2px;
+  background: linear-gradient(to bottom, #795663 0%, #D9BCAF 100%);
+  border-radius: 2px;
+  margin: 40px 0;
+  opacity: 0.7;
+  min-height: 300px;
+}
+
+/* Projects list and styles */
+.about-projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.about-projects-list li {
+  margin-bottom: 32px;
+}
+
+.project-link {
+  color: #8A9688;
+  font-size: 1.15rem;
+  font-family: 'Marcellus SC', serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: #D9BCAF;
+  text-decoration: underline;
+}
+
+
+.project-desc {
+  display: block;
+  color: #D9BCAF;
+  font-size: 1rem;
+  margin-top: 6px;
+  font-family: 'Segoe UI', serif;
+  opacity: 0.95;
+}
+
+.contact-email {
+  margin-top: 220px;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', serif;
+  color: #8A9688;
+}
+
+.contact-email a {
+  color: #8A9688;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #D9BCAF;
+  text-decoration: underline;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-horizontal {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-vertical-divider {
+    display: none;
+  }
+
+  .about-col {
+    padding: 32px 16px;
+  }
+
+  .about-heading,
+  .projects-heading,
+  .about-projects-header {
+    text-align: center;
+  }
+
+
+}
+
+
