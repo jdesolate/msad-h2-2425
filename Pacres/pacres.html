@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Profile</title>
+    <title>Pacres First Website</title>
     <link rel="stylesheet" href="pacres.css">
 </head>
 <body>
@@ -47,10 +47,16 @@
                         </svg>
                         About Me
                     </h3>
-                    <p>Passionate software/computer engineer with expertise in modern web technologies and hardware. I love creating innovative solutions and learning new technologies. Always excited to work on challenging projects that make a difference.</p>
+                    <p>Introverted but passionate computer engineering student with expertise in modern web technologies and hardware. Eager to create innovative solutions and learn new technologies. Always excited to work on challenging projects that make a difference.</p>
                     <div style="margin-top: 15px;">
                         <div class="info-item">
-                            <strong>Hobbies:</strong> Sketching, Fish keeping, Programming, Gardening, Reading
+                            <strong>Hobbies:</strong> Sketching, Fish keeping, Programming, Gardening, Gaming, Reading
+                        </div>
+                        <div class="info-item">
+                            <strong>Interests:</strong> Pizza, Switzerland, Orange (fruit), Aquarium/Terrarium, Anime, Manga/Manhwa, Robots
+                        </div>
+                        <div class="info-item">
+                            <strong>Crave:</strong> Loyal and Supportive ABG (Asian Baby Girl) or EB (European Baddie), Escape Philippines and Poverty (sorry Dr. J.Rizz)
                         </div>
                         <div class="info-item">
                             <strong>Phone:</strong> +63 926 081 0243
@@ -58,14 +64,14 @@
                         <div class="info-item">
                             <strong>Location:</strong> Inayawan, Cebu City, Philippines
                         </div>
+                        <div class="info-item">
+                            <strong>Email:</strong> <a href="mailto: pacresjohn029@gmail.com"> pacresjohn029@gmail.com </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in">
                     <h3>
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
                         Connect With Me
                     </h3>
                     <div class="social-links">
@@ -125,7 +131,7 @@
 
                 <div class="project-item">
                     <div class="project-title">EcoCalc Plus</div>
-                    <div class="project-desc">Windows forms version of EcoCalc; it is still has features of the console version but with more additional features such as footprint prediction and global footprint view.</div>
+                    <div class="project-desc">Windows forms version of EcoCalc; it still has the functions of the console version but with more additional features such as footprint prediction (via Random Forest model) and global footprint view.</div>
                     <div class="project-tech">
                         <span class="tech-tag">C#</span>
                         <span class="tech-tag">Access</span>
@@ -137,6 +143,23 @@
                 </div>
 
                 <div class="project-item">
+                    <div class="project-title">EcoCollect</div>
+                    <div class="project-desc">Simple unity-based platformer game embedded in EcoCalc Plus wherein you are to collect trash to reduce your carbon footprint emission.</div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/JohnEmmanuelPacres/EcoCollect" class="project-link">View on GitHub →</a>
+                        <button class="game-button" onclick="playGame()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,3 19,12 5,21"/>
+                            </svg>
+                            Play Game
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-item">
                     <div class="project-title">Console Password Manager</div>
                     <div class="project-desc">Standalone program that stores password locally in the console application; uses AES (Advanced Encryption Standard) for reversibility and SHA-256 (Secure Hash Algorithm) for storing password in local .csv database.</div>
                     <div class="project-tech">
@@ -144,6 +167,7 @@
                     </div>
                     <a href="https://github.com/JohnEmmanuelPacres/Console-Password-Manager" class="project-link">View on GitHub →</a>
                 </div>
+
             </section>
 
             <section class="content-section fade-in">
@@ -152,7 +176,7 @@
                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                         <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                     </svg>
-                    Courses & Certifications
+                    Future Courses & Certifications<br>(via Advanced Observation Haki)
                 </h2>
                 
                 <div class="course-item">
@@ -183,5 +207,9 @@
     </div>
 
     <script src="pacres.js"></script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Pacres First Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
