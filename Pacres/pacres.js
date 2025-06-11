@@ -136,7 +136,7 @@
 
         // Add typing effect to profile title
         function typeEffect() {
-            const titles = ['Computer Engineer', 'AI Enthusiast', 'Problem Solver', 'Tech Innovator'];
+            const titles = ['Computer Engineer Sophomore', 'AI and ML Enthusiast', 'Problem Solver', 'Tech Innovator'];
             let titleIndex = 0;
             let charIndex = 0;
             const titleElement = document.querySelector('.profile-title');
@@ -163,6 +163,11 @@
             }
             
             type();
+        }
+
+        function playGame() {
+            // Directly open the itch.io game page
+            window.open('https://johnemmanuelpacres.itch.io/ecocollect', '_blank');
         }
 
         // Start typing effect after page load
