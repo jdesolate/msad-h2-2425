@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #626F47; 
+    color: #ededed;
+}
+
+.header{
+    position: fixed; 
+    top: 0; 
+    left: 0;    
+    width: 100%;
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, rgba(98, 111, 71, 0.3), rgba(98, 111, 71, 0.9));
+    color: white;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}   
+
+.logo {
+    font-size: 25px; 
+    color: #ededed; 
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed; 
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .5s;
+}
+
+.navbar a:hover, 
+.navbar a:active {
+    color: #A4B465; 
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    padding: 0 10%; 
+}
+
+
+.home img{ 
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.home-content {
+    max-width: 1000px;
+    padding-right: 100px;
+}
+
+.home-content h1 {
+     font-size: 56px; 
+     font-weight: 700;
+     line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px; 
+    font-weight: 700;
+    color: #A4B465;
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 20px 0 40px;
+}
+
+.educ {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #a5b96f;
+    color: #fff;
+}
+
+.educ h1 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.educ-entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 auto 50px;
+    max-width: 850px;  
+    padding: 0 10px;   
+}
+
+.educ-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.educ-text {
+    max-width: 400px;
+    text-align: left;
+}
+
+.educ-text h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.educ-text p {
+    max-width: 700px;   
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.school-logo img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.soc {
+    height: 100vh;
+   text-align: center;
+    background-color: transparent;
+    color: #fff;
+}
+.soc-content img{
+    width: 350px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.soc-content {
+    height: 70%;
+    width: 100%;
+    padding: 5% 0%; 
+}
+
+.soc-content h1 {
+     font-size: 32px; 
+     font-weight: 700;
+     line-height: 1.2;
+     margin: 3%;
+}
+
+
+.soc-content a {
+  font-size: 1rem;
+  width: 170px;
+  text-decoration: none; 
+  padding: 10px;
+  background-color: #333; 
+  color: white;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle; 
+  margin-right: 50px;
+}
+
+.gallery {
+    padding: 60px 10px;
+    background-color: #d4e4a1; /* light olive tone for contrast */
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
