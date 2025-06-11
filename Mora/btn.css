@@ -1,0 +1,36 @@
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0;           /* Remove large top margin */
+  position: fixed;         /* Anchor to the top */
+  top: 0;                  /* Top of the viewport */
+  left: 50%;               /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 100;            /* Stay above other elements */
+  background: rgba(31, 28, 44, 0.85); /* Optional: subtle background for readability */
+  padding: 1rem 2rem;      /* Optional: padding for spacing */
+  border-radius: 0 0 20px 20px; /* Optional: rounded bottom corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* Optional: subtle shadow */
+}
+
+.btn {
+  background: linear-gradient(90deg, #8400ff 0%, #4b4081 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  outline: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover, .btn:focus {
+  background: linear-gradient(90deg, #4b4081 0%, #8400ff 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
